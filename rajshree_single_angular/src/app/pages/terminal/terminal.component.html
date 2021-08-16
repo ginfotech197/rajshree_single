@@ -5,7 +5,15 @@
     <div class="p-2 background body  bd-highlight" id="background" >
       <div fxLayout="row" fxLayoutAlign="" >
         <div id="table-1" fxFlex="35" class="  mt-2" >
-            <table class="table" id="triple-table" style="border: 5px solid lightgoldenrodyellow;">
+          <div class="d-flex">
+            <div class="col-3" style="background-size: cover; color: white;width: 60px;">
+              <div style="background-color: red;">0<br><div><input type="text" value=""></div></div>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3" style="background-color: red; background-size: cover; color: white;">1</div>
+            <div class="col-3"></div>
+          </div>
+            <!-- <table class="table" id="triple-table" style="border: 5px solid lightgoldenrodyellow;">
               <thead class="mt-5 triple-table-thead">
               <tr>
                 <th class="pink" *ngFor="let single of singleNumbers; let i = index">
@@ -46,16 +54,17 @@
               <div class="left-div" style="padding-top: 15px;" >
                <span class="d-flex" style="padding-left: 25px;" ><img src="assets/images/play.png" height="70px" alt=""> <h4 style="font-weight: bolder; font-size: large; padding-top: 15px; padding-left: 20px;">{{totalTicketPurchased}}</h4></span>
               </div>
-            </div>
+            </div> -->
         </div>
 
         <div fxFlex="30">
           <div class="text-center" style="">
-            <div style="padding-top: px;text-align: center; background-repeat: no-repeat;min-height: 100px; ">
+            <div style="padding-top: 20px;text-align: center; background-repeat: no-repeat;min-height: 100px;font-weight: bold; ">
+              <span>Game Id:</span>
                 <ngx-wheel
                 #wheel
-                width='250'
-                height='250'
+                width='400'
+                height='400'
                 spinDuration='8'
                 [disableSpinOnClick]='true'
                 [items]='items'
@@ -74,7 +83,7 @@
 
             </ngx-wheel>
 
-            <!-- <div class="bd-highlight current-result">{{result.visible_triple_number || '***'}}</div> -->
+
             <div class="d-flex">
               <div class="col-5"></div>
               <div class="col-2" style="color: white;font-size: larger;"><span *ngIf="todayLastResult && todayLastResult.data!=null">
@@ -84,7 +93,7 @@
             </div>
 
 
-              <div style="padding-top: 0px; padding-right: 15px;">
+              <!-- <div style="padding-top: 0px; padding-right: 15px;">
                 <div class="d-flex">
                   <div class="col-5"></div>
                   <div class="col-2" style="color: white; font-weight: bold; margin-left: 11px;">SINGLES</div>
@@ -101,8 +110,8 @@
                     <input *ngFor="let x of chips; let i= index" class="chips-button-{{i}}" [ngClass]="(selectedChip==x)?'selectedChipStyle':''" mat-fab value="bold" type="button" value="" (click)="changeChip(x)">
                   </div>
                 </div>
-              </div>
-              <div style="background-image: url('/assets/images/place.png'); background-size: cover;height: 90px;"></div>
+              </div> -->
+              <!-- <div style="background-image: url('/assets/images/place.png'); background-size: cover;height: 90px;"></div> -->
 
             </div>
 
@@ -112,14 +121,14 @@
 
         <div fxFlex="35" class=" ml-2 mt-2" style=" color: white; font-weight: bold; ">
 
-          <div class="container right-container" >
+          <!-- <div class="container right-container" >
             <table class="" >
               <thead >
                 <tr >
                   <th colspan="4">
                     <div>{{currentDate}}&nbsp;
                     </div>
-                    <!-- <div>GAME1 RESULT SHEET</div> -->
+
                   </th>
                   <th colspan="4" style="padding-left: 100px;">
                     <div style="text-align: end; color: white;">RESULT SHEET</div>
@@ -140,7 +149,7 @@
                           <span *ngIf="result.single_number!=null"></span>{{result.single_number}}
                           <span *ngIf="result.single_number==null"><img src="assets/images/singleStar3.gif" height="20px" alt=""></span>
                         </div>
-                        <!-- <div class="bd-highlight current-result" style="background-color: rgb(28, 35, 253);"><img src="assets/images/singleStar.gif" height="10px" alt=""></div> -->
+
                       </td>
                     </tr>
                   </ng-container>
@@ -162,12 +171,12 @@
             <div class=" d-flex" style="height: 50px; border-radius: 10px; padding-top: 20px;padding-left: 211px;">
               <button (click)="saveUserPlayInputDetails()" style="font-size: 100%; width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double;" class="btn btn-warning ml-1 btn-responsive">BUY</button>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
       </div>
-      <div><marquee behavior="" direction="" style="color: white; font-size: 50px; font-weight: bold;">Welcome</marquee></div>
+      <!-- <div><marquee behavior="" direction="" style="color: white; font-size: 50px; font-weight: bold;">Welcome</marquee></div> -->
 
 
 
