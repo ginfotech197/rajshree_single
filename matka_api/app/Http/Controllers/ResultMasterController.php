@@ -33,7 +33,7 @@ class ResultMasterController extends Controller
 
 
             $data = DrawMaster::select('result_masters.game_date','draw_masters.end_time','number_combinations.triple_number',
-                'number_combinations.visible_triple_number','single_numbers.single_number')
+                'single_numbers.single_number')
                 ->leftJoin('result_masters', function ($join) use ($result_date) {
                     $join->on('draw_masters.id','=','result_masters.draw_master_id')
                         ->where('result_masters.game_date','=', $result_date);

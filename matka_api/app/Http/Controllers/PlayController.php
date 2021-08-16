@@ -84,35 +84,40 @@ class PlayController extends Controller
             $output_play_details = array();
             foreach($inputPlayDetails as $inputPlayDetail){
                 $detail = (object)$inputPlayDetail;
-                $gameType = GameType::find($detail->gameTypeId);
-                //insert value for triple
-                if($detail->gameTypeId == 2){
-                    $playDetails = new PlayDetails();
-                    $playDetails->play_master_id = $playMaster->id;
-                    $playDetails->game_type_id = $detail->gameTypeId;
-                    $playDetails->number_combination_id = $detail->numberCombinationId;
-                    $playDetails->quantity = $detail->quantity;
-                    $playDetails->mrp = $detail->mrp;
-                    $playDetails->commission = $gameType->commission;
-                    $playDetails->payout = $gameType->payout;
-                    $playDetails->save();
-                    $output_play_details[] = $playDetails;
-                }
-                if($detail->gameTypeId == 1){
-                    $numberCombinationIds = SingleNumber::find($detail->singleNumberId)->number_combinations->pluck('id');
-                    foreach ($numberCombinationIds as $numberCombinationId){
+                if($detail->gameTypeId == 1) {
+                    $gameType = GameType::find($detail->gameTypeId);
+                    //insert value for triple
+                    if ($detail->gameTypeId == 2) {
                         $playDetails = new PlayDetails();
                         $playDetails->play_master_id = $playMaster->id;
                         $playDetails->game_type_id = $detail->gameTypeId;
-                        $playDetails->number_combination_id = $numberCombinationId;
+                        $playDetails->number_combination_id = $detail->numberCombinationId;
                         $playDetails->quantity = $detail->quantity;
-                        $playDetails->mrp = round($detail->mrp/22,4);
+                        $playDetails->mrp = $detail->mrp;
                         $playDetails->commission = $gameType->commission;
                         $playDetails->payout = $gameType->payout;
                         $playDetails->save();
                         $output_play_details[] = $playDetails;
-
                     }
+                    if ($detail->gameTypeId == 1) {
+                        $numberCombinationIds = SingleNumber::find($detail->singleNumberId)->number_combinations->pluck('id');
+                        foreach ($numberCombinationIds as $numberCombinationId) {
+                            $playDetails = new PlayDetails();
+                            $playDetails->play_master_id = $playMaster->id;
+                            $playDetails->game_type_id = $detail->gameTypeId;
+                            $playDetails->number_combination_id = $numberCombinationId;
+                            $playDetails->quantity = $detail->quantity;
+                            $playDetails->mrp = round($detail->mrp / 22, 4);
+                            $playDetails->commission = $gameType->commission;
+                            $playDetails->payout = $gameType->payout;
+                            $playDetails->save();
+                            $output_play_details[] = $playDetails;
+
+                        }
+                    }
+                }else{
+                    DB::rollBack();
+                    return response()->json(['success'=>0,'exception'=>$e->getMessage(),'error_line'=>$e->getLine(),'file_name' => $e->getFile()], 500);
                 }
 
             }
