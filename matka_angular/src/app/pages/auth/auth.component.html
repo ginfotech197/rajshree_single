@@ -1,0 +1,51 @@
+
+
+<div fxLayout.xs="column" fxLayout="row" fxFlex="30" fxLayoutAlign="center center" id="login-outer-div">
+
+  <div style="min-height: 65vh">
+    <mat-card fxFlex="95"  class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+    </mat-card-header>
+
+     <mat-card-content>
+        <div id="content">
+
+          <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+          <form  [formGroup]="loginForm"  *ngIf="!isLoading">
+            <h1>{{loginType}} Login</h1>
+<!--            <mat-error>User ID or Password is wrong</mat-error>-->
+            <mat-form-field>
+              <input type="text" matInput formControlName="email" id="email" placeholder="User ID">
+<!--              <input type="text" matInput placeholder="Username"-->
+<!--                     id="email"-->
+<!--                     formControlName="email"-->
+<!--                     name="email"-->
+<!--                     >-->
+            </mat-form-field>
+
+            <mat-form-field>
+              <input type="password"  matInput showHideInput formControlName="password" id="password" placeholder="Password">
+              <i matSuffix
+                 class="material-icons"
+                 showHideTrigger="password"
+                 [showHideStatus]="{ materialIcon: true, id: 'password' }"
+              ></i>
+            </mat-form-field>
+            <!--                 [showHideStatus]="{ materialIcon: true, id: 'password' }"-->
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="end start" fxLayoutGap="10px" fxLayoutGap.xs="0">
+          <button mat-button class="btn btn-primary" type="button" (click)="onSubmit()" >Login</button>
+        </div>
+
+
+      </form>
+      </div>
+     </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+  </div>
+
+</div>

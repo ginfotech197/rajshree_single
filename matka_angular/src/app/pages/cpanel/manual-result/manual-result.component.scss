@@ -1,0 +1,41 @@
+.triple-number-button:hover{
+  background-color: rgb(103, 108, 103) !important;
+}
+
+.mobile{
+  .coder-fab {
+    width: 35px;
+    height: 35px;
+    line-height: 14px;
+    font-size: 14px;
+
+    &::ng-deep .mat-button-wrapper{
+      line-height: 14px;
+      padding: 0;
+
+      .mat-icon {
+        font-size: 12px;
+        padding-right: 4px;
+        padding-top: 4px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.scroll-arrow{
+  border-radius: 50%;
+}
+
+.green {
+  background-color: rgb(247, 102, 203);
+  height: 55px;
+  width: 55px;
+  border-radius: 30px;
+  color: white;
+ }
+
+

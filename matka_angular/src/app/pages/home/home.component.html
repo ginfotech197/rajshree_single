@@ -1,0 +1,65 @@
+<div [ngClass]="deviceXs?'mobile':'desktop'">
+   <div id="title-1-div">
+    <span style="">Kolkata 1st Fatafat Today Result ✔ Sabse Pahle Yaha Par Milta Hai ♛ Live कोलकाता Fatafat Chart Dekho ♤♦♣ Patti Aur Single Ke Sath.</span>
+  </div>
+
+  <div id="title-2-div">
+    <span>Lucky Number 1st Chart  Kya Result Aayega.</span>
+  </div>
+
+  <div id="title-3-div">
+    <div id="title-3-div-child-1">Kolkata 1st Today Result Sabse Pahle Dekho</div>
+    <div id="title-3-div-child-2">{{currentDate}}</div>
+  </div>
+
+  <div id="title-4-div">
+    <div>*No Fake Result* | हम #Fake Result Update नहीं करते</div>
+  </div>
+
+  <div class="col-md-4 text-right">
+    <button class="btn btn-success btn-block" (click)="openPDF()" *ngIf="!isProduction">Download PDF</button>
+  </div>
+
+  <div id="table-div" >
+    <div  *ngFor="let tableData of resultList; let i = index">
+      <table class="table" >
+          <thead>
+            <tr><td style="background-color: #85592e;" colspan="8">{{tableData.date}}</td></tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of tableData.result.slice(0, tableData.result.length % columnNumber  === 0 ?
+               tableData.result.length / columnNumber : tableData.result.length / columnNumber + 1); let idx = index">
+              <td scope="row" *ngFor="let result of tableData.result.slice(idx * columnNumber, idx * columnNumber + columnNumber)">
+                <div class=" result-heading">{{result.end_time.slice(0,5)}}</div>
+                <div class="bd-highlight">{{result.visible_triple_number || '***'}}</div>
+                <div class="bd-highlight">{{(result.single_number!=null && result.single_number>=0) ?  result.single_number : '*'}}</div>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex" *ngIf="!isProduction">
+  <div class="col-3">
+    <mat-slide-toggle (change)="showDevArea=!showDevArea">{{showDevArea?"Hide Developer Area":"Show Developer Area"}}</mat-slide-toggle>
+  </div>
+</div>
+
+<div class="d-flex" *ngIf="!isProduction && showDevArea">
+  <div class="col-3">
+      <pre>
+          {{resultList | json}}
+      </pre>
+  </div>
+  <div class="col-6">
+      <pre>
+
+      </pre>
+  </div>
+  <div class="col-3"><pre></pre>
+  </div>
+</div>
+
+
