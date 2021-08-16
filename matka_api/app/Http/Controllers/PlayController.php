@@ -89,8 +89,7 @@ class PlayController extends Controller
                 if($detail->gameTypeId == 2){
                     $playDetails = new PlayDetails();
                     $playDetails->play_master_id = $playMaster->id;
-//                    $playDetails->game_type_id = $detail->gameTypeId;
-                    $playDetails->game_type_id = 1;
+                    $playDetails->game_type_id = $detail->gameTypeId;
                     $playDetails->number_combination_id = $detail->numberCombinationId;
                     $playDetails->quantity = $detail->quantity;
                     $playDetails->mrp = $detail->mrp;
@@ -104,8 +103,7 @@ class PlayController extends Controller
                     foreach ($numberCombinationIds as $numberCombinationId){
                         $playDetails = new PlayDetails();
                         $playDetails->play_master_id = $playMaster->id;
-//                        $playDetails->game_type_id = $detail->gameTypeId;
-                        $playDetails->game_type_id = 1;
+                        $playDetails->game_type_id = $detail->gameTypeId;
                         $playDetails->number_combination_id = $numberCombinationId;
                         $playDetails->quantity = $detail->quantity;
                         $playDetails->mrp = round($detail->mrp/22,4);
