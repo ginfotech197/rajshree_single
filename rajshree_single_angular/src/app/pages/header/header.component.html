@@ -210,33 +210,36 @@
 
 
   <!--For Terminal-->
-  <mat-toolbar color="golden" style="background-color: #21d190;  background-image: linear-gradient(315deg, #093028 0%, #237A57 74%); color: rgb(255, 255, 255);" *ngIf="isAuthenticated && isTerminal">
+  <mat-toolbar color="golden" style="background-color: #3ed121;  background-image: linear-gradient(315deg, #3e88f7 0%, #08d684 74%); color: rgb(255, 255, 255);" *ngIf="isAuthenticated && isTerminal">
+
 <!--    for desktop view-->
     <mat-toolbar-row fxLayoutAlign="space-between center" *ngIf="!deviceXs">
-      <div fxLayout="row">
-        <button mat-button [routerLink]="['terminal']">
+        <div fxLayout="row">
+          <img src="assets/images/single-coin.png" height="100px" alt="">
+          <button mat-button [routerLink]="['terminal']">
+            <i class="bi bi-bookmark-star-fill" style="font-size: 25px;"></i>
+            <span class="logo">{{user.userName}}</span>
+          </button>
+          <div fxLayout="row" class="mb-2 mt-1" style="border: 2px solid rgb(3, 148, 11); border-style: dotted;">
+            <div *ngIf="!deviceXs">
+              <button class=" mt-4 ml-1 mr-1" style="font-size: large;  background-color: rgb(94, 74, 55); border-radius: 5px; width: 80px; text-align: center;" mat-button
+                      [routerLink]="['/']"
+                      routerLinkActive="MyActiveMenu"
+                      [routerLinkActiveOptions]="{exact: true}">Home</button>
+              <!-- <mat-slider min="1" max="5" step="1" value="1" (input)="onMatSliderInputChange($event)"></mat-slider> -->
+            </div>
+            <div class=" mt-2 ml-3 mr-3 mb-2" style="font-size: large; background-color: rgb(161, 5, 0); border-radius: 5px; width: 80px; text-align: center;">Balc<br>{{user.balance}}</div>
+            <span class="mt-2 ml-3 mr-3" style="font-size: large;  background-color: rgb(20, 2, 187); border-radius: 5px; width: 100px; text-align: center;">Next draw<br>{{activeDrawTime.visibleTime}}</span>
+          </div>
 
-          <i class="bi bi-bookmark-star-fill" style="font-size: 25px;"></i>
-          <span class="logo">{{user.userName}}</span>
-        </button>
 
-        <div *ngIf="!deviceXs">
-          <button class=" mt-2 ml-1 mr-1" style="font-size: large;" mat-button
-                  [routerLink]="['/']"
-                  routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Home</button>
-          <!-- <mat-slider min="1" max="5" step="1" value="1" (input)="onMatSliderInputChange($event)"></mat-slider> -->
-        </div>
-        <div class=" mt-2 ml-1 mr-1" style="font-size: large;">Balc:{{user.balance}}</div>
+          <!-- <div class="clock-container clock2 ml-1 mt-0 pt-1" *ngIf="alwaysTime" style="font-size: large; width: 150px;">
+            <div class="time">{{alwaysTime}}</div>
+          </div> -->
 
-
-        <span class="mt-2 ml-1 mr-1" style="font-size: large;">Next draw:{{activeDrawTime.visibleTime}}</span>
-
-        <!-- <div class="clock-container clock2 ml-1 mt-0 pt-1" *ngIf="alwaysTime" style="font-size: large; width: 150px;">
-          <div class="time">{{alwaysTime}}</div>
-        </div> -->
 
       </div>
+
 
       <div fxLayout="row">
         <div class="clock-container clock2 ml-1 mt-0 pt-1" *ngIf="alwaysTime" style="font-size: large; width: 150px;">
