@@ -1,0 +1,1 @@
+wt -p "Command Prompt" -d e:\rajshree_single ; new-tab -p "Rajshree_single Angular Ng" -d e:\rajshree_single\rajshree_single_angular; split-pane -p "Rajshree_single Api Php" -d e:\rajshree_single\rajshree_single_api; new-tab -p "Rajshree_single Angular"; new-tab -p "Rajshree_single Project"
