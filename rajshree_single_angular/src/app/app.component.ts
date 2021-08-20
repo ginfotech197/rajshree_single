@@ -14,7 +14,7 @@ import {CommonService} from './services/common.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy{
-  title = 'kfatafat';
+  title = 'Rajshree single';
   active = 1;
   events: string[] = [];
   opened: boolean;
@@ -44,13 +44,13 @@ export class AppComponent implements OnInit, OnDestroy{
     this.canonicalService.setCanonicalURL();
     this.pageTitle.setTitle(this.title);
     this.metaService.addTags([
-      { name: 'keywords', content: 'Kfatafat online games' },
+      { name: 'keywords', content: 'rajshree online games' },
       { name: 'robots', content: 'index, follow' },
-      { name: 'author', content: 'kfatafat kolkata' },
+      { name: 'author', content: 'rajshree kolkata' },
       { name: 'date', content: '2021-05-25', scheme: 'YYYY-MM-DD' },
       { charset: 'UTF-8' },
-      { description: 'kfatafat⭐ORIGNAL WEBSITE ⭐ Today All Bazi Tips KOLKATA Fatafat Result Live Update. Kolkata Fatafat Result . कोलकाता फटाफट RESULT, Prediction the result and win, try your luck..\n' +
-          '‎Kolkata Fatafat · ‎OLD Kolkata  kFatafat Result · ‎Kolkata fun lucky number · ‎Kolkata FF FUN result since 1960' }
+      { description: 'rajshree WEBSITE ⭐ Today All Bazi Tips KOLKATA rajshree Result Live Update. Kolkata Fatafat Result . कोलकाता फटाफट RESULT, Prediction the result and win, try your luck..\n' +
+          '‎Kolkata rajshree · ‎OLD Kolkata  rajshree Result · ‎Kolkata fun lucky number · ‎Kolkata FF FUN result since 1960' }
     ]);
 
 
