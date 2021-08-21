@@ -73,7 +73,7 @@ export class TerminalComponent implements OnInit {
     // this.renderer.setStyle(document.body, 'background-image', ' url("assets/images/curtain.jpg")');
     // this.renderer.setStyle(document.body.firstChild., 'background-image', ' url("assets/images/curtain.jpg")');
     const layer = document.querySelector('.layer');
-    this.renderer.setStyle(layer, 'background-color', ' rgba(78, 180, 248, 0.1)');
+    this.renderer.setStyle(layer, 'background-color', ' rgba(255, 255, 255, 0)');
     // this.renderer.listen(hello, 'click', console.log);
     this.currentDate = this.commonService.getCurrentDate();
     this.deviceXs = this.commonService.deviceXs;
