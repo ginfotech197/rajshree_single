@@ -111,6 +111,20 @@ export class HeaderComponent implements OnInit, OnDestroy {
     };
   }
 
+  setTerminalHeader(){
+    console.log('terminal header is working',this.deviceXs);
+   if(this.deviceXs){
+    return {
+      'background-color': 'rgba(255,0,0,' + (10 / 100) + ')',
+    };
+   }else{
+    return {
+      'background-color': 'rgba(255,25,10,' + (10 / 100) + ')',
+    };
+   }
+  }
+
+
 
 
   onMatSliderInputChange($event: any) {
