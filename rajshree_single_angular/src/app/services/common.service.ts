@@ -91,20 +91,33 @@ export class CommonService {
         currentTime = tempHour + ':' + tempMinute + ':' + tempSecond + '' + tempMeridiem;
       }
 
+      let remainingMin = 0;
+      // @ts-ignore
+      const remainingHour = this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour);
+      // @ts-ignore
+      if (((this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour)) == 1)){
+        // tslint:disable-next-line:no-shadowed-variable
+        const remainingHour = 0;
+      }
+      // @ts-ignore
+      if (this.activeDrawTime.endTime.split(':')[1] == 0){
+         // @ts-ignore
+        // @ts-ignore
+        remainingMin = Math.abs(this.currentTimeObj.minute - 60);
+      }else{
+       // @ts-ignore
+        remainingMin = Math.abs(this.currentTimeObj.minute - this.activeDrawTime.endTime.split(':')[1]);
+      }
 
       // @ts-ignore
-      let remainingHour = this.activeDrawTime.endTime.split(":")[0]-this.currentTimeObj.hour;
-      // @ts-ignore
-      let remainingMin = Math.abs(this.currentTimeObj.minute - this.activeDrawTime.endTime.split(":")[1]);
-      // @ts-ignore
-      let remainingSec = Math.abs(60-(this.currentTimeObj.second-this.activeDrawTime.endTime.split(":")[2]));
+      const remainingSec = Math.abs(60 - (this.currentTimeObj.second-this.activeDrawTime.endTime.split(':')[2]));
 
       // @ts-ignore
-      let remainingTime = remainingHour + ':' + remainingMin + ':' + remainingSec;
+      const remainingTime = remainingHour + ':' + remainingMin + ':' + remainingSec;
 
       // console.log('rm_mn: '+ remainingMin , 'rem_sec' + remainingSec);
 
-      if(remainingMin<=1){
+      if (remainingMin <= 1){
         this.updateTerminalCancellation().subscribe();
       }
 
@@ -112,10 +125,6 @@ export class CommonService {
       this.remainingTimeBehaviorSubject.next(remainingTime);
       // just testing if it is working
     }, 1000);
-
-
-
-    // this.updateTerminalCancellation().subscribe();
 
 
     // get active draw

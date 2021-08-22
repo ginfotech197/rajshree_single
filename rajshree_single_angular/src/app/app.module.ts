@@ -73,6 +73,7 @@ import { MasterStockistComponent } from './pages/cpanel/master-stockist/master-s
 // import { MasterStockistModule } from './modules/general/cpanel/master-stockist/master-stockist.module';
 import {MatTabsModule} from '@angular/material/tabs';
 import {NgMarqueeModule} from 'ng-marquee-improved';
+import {MatProgressBar, MatProgressBarModule} from '@angular/material/progress-bar';
 // import { ResultComponent } from './pages/cpanel/result/result.component';
 // import { ResultModule } from './modules/general/cpanel/result/result.module';
 // import { PayoutSettingComponent } from './pages/cpanel/payout-setting/payout-setting.component';
@@ -150,6 +151,7 @@ import {NgMarqueeModule} from 'ng-marquee-improved';
     // ManualResultModule,
     // TerminalModule,
     // DeveloperModule,
+    MatProgressBarModule,
     MatMenuModule,
     MatSidenavModule,
     MatSliderModule,

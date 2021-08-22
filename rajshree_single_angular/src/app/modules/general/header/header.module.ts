@@ -10,6 +10,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatListModule} from '@angular/material/list';
 import {FlexModule} from '@angular/flex-layout';
+import {MatProgressBar, MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatProgressSpinner, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import {FlexModule} from '@angular/flex-layout';
     MatMenuModule,
     MatSliderModule,
     MatListModule,
-    FlexModule
+    FlexModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
   ]
 })
 export class HeaderModule { }

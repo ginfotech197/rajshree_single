@@ -9,6 +9,9 @@ import {ProjectSetting} from '@angular/cli/commands/analytics';
 import {ProjectData} from '../../models/project-data.model';
 import {environment} from '../../../environments/environment';
 import {DrawTime} from '../../models/DrawTime.model';
+import {ThemePalette} from '@angular/material/core';
+import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
+import {parse} from '@fortawesome/fontawesome-svg-core';
 
 
 @Component({
@@ -17,8 +20,14 @@ import {DrawTime} from '../../models/DrawTime.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+
+  // color: ThemePalette = 'primary';
+  mode: ProgressSpinnerMode = 'determinate';
+  value = 0;
+
   projectData: ProjectData;
   alwaysTime: number;
+  remainingTime: number;
   @Input() deviceXs: boolean;
   userSub: Subscription;
   isAuthenticated = false;
@@ -43,6 +52,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     this.commonService.currentTimeBehaviorSubject.asObservable().subscribe(response => {
       this.alwaysTime = response;
+      // console.log(this.alwaysTime);
+    });
+
+    this.commonService.remainingTimeBehaviorSubject.asObservable().subscribe(response => {
+      this.remainingTime = response;
+      console.log(this.remainingTime);
+      const x = String(this.remainingTime).split(':');
+      // tslint:disable-next-line:radix
+      this.value = (((parseInt(x[1])*60)+parseInt(x[2]))/(15*60))*100;
     });
 
     this.userSub = this.authService.userBehaviorSubject.subscribe(user => {
