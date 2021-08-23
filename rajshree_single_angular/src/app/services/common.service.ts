@@ -115,7 +115,8 @@ export class CommonService {
       }
 
       // @ts-ignore
-      const remainingSec = Math.abs(60 - (this.currentTimeObj.second-this.activeDrawTime.endTime.split(':')[2]));
+      // const remainingSec = Math.abs(60 - (this.currentTimeObj.second-this.activeDrawTime.endTime.split(':')[2]));
+      const remainingSec = Math.abs((this.currentTimeObj.second-this.activeDrawTime.endTime.split(':')[2]) - 60);
 
       // @ts-ignore
       const remainingTime = remainingHour + ':' + remainingMin + ':' + remainingSec;
