@@ -92,16 +92,21 @@ export class CommonService {
       }
 
       let remainingMin = 0;
+      let remainingHour = 0;
       // @ts-ignore
-      const remainingHour = this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour);
+      // const remainingHour = this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour);
+      // console.log('remainingHour', remainingHour);
       // @ts-ignore
-      if (((this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour)) == 1)){
+      // if (((this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour)) == 1)){
+      if ((this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour)) === 1){
         // tslint:disable-next-line:no-shadowed-variable
         const remainingHour = 0;
+      }else{
+        // @ts-ignore
+        remainingHour = this.activeDrawTime.endTime.split(':')[0] - (this.currentTimeObj.hour);
       }
       // @ts-ignore
       if (this.activeDrawTime.endTime.split(':')[1] == 0){
-         // @ts-ignore
         // @ts-ignore
         remainingMin = Math.abs(this.currentTimeObj.minute - 60);
       }else{
@@ -130,6 +135,7 @@ export class CommonService {
     // get active draw
     this.http.get(this.BASE_API_URL + '/dev/drawTimes/active').subscribe((response: ServerResponse) => {
       this.activeDrawTime = response.data;
+      // console.log('active draw', this.activeDrawTime);
       this.activeDrawTimeSubject.next({...this.activeDrawTime});
     });
   }

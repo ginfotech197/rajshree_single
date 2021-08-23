@@ -113,14 +113,6 @@ export class TerminalComponent implements OnInit {
     // audio.load();
     // audio.play();
 
-    this.commonService.remainingTimeBehaviorSubject.asObservable().subscribe(response => {
-      this.remainingTime = response;
-      console.log(this.remainingTime);
-      const x = String(this.remainingTime).split(':');
-      // tslint:disable-next-line:radix
-      this.value = (((parseInt(x[1]) * 60) + parseInt(x[2] + ((parseInt(x[0]) * 3600)))) / (15 * 60)) * 100;
-    });
-
     this.idToLandOn = this.seed[Math.floor(Math.random() * this.seed.length)];
     const colors = ['#FFA500', '#8B008B', '#FF1493', '#20B2AA', '#8B0000', '#00FF00', '#e0e000', '#0000FF', '#6A5ACD', '#cd5c5c'];
     this.items = this.seed.map((value) => ({
@@ -170,6 +162,21 @@ export class TerminalComponent implements OnInit {
     });
 
     this.nextDrawId = this.watchDrawService.getNextDraw();
+
+    this.commonService.remainingTimeBehaviorSubject.asObservable().subscribe(response => {
+      this.remainingTime = response;
+      // console.log(this.remainingTime);
+      const x = String(this.remainingTime).split(':');
+      // tslint:disable-next-line:radix
+      const minToSec = parseInt(x[1]) * 60;
+      // tslint:disable-next-line:radix
+      const hourToSec = parseInt(x[0]) * 3600;
+      // tslint:disable-next-line:radix
+      const sec = parseInt(x[2]);
+      const timeDiffMinToSec = this.activeDrawTime.time_diff * 60;
+      // tslint:disable-next-line:radix
+      this.value = ((hourToSec + minToSec + sec) / timeDiffMinToSec) * 100;
+    });
 
 
   }// end of ngOnIInit

@@ -7,5 +7,6 @@ export class DrawTime{
   endTime: string;
   visibleTime?: string;
   active: number;
+  time_diff: number;
 
 }
