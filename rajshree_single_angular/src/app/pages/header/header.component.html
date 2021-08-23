@@ -211,7 +211,7 @@
 
   <!--For Terminal-->
   <mat-toolbar color="golden" style="background-image: url('/assets/images/terminal-header.jpg');" *ngIf="isAuthenticated && isTerminal">
-    <p style="font-size: 90px;">hi{{deviceXs}}</p>
+<!--    <p style="font-size: 90px;">hi{{deviceXs}}</p>-->
 <!--    for desktop view-->
     <mat-toolbar-row fxLayoutAlign="space-between center" *ngIf="!deviceXs">
         <div fxLayout="row">
@@ -234,12 +234,12 @@
 
 
       <div fxLayout="row">
-        <div class="pt-4"  style="font-size: large; width: 150px">
-<!--          <div class="time">{{remainingTime}}</div>-->
-          <mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>
-        </div>
-        <div class="clock-container clock2 ml-1 mt-0 pt-1"  style="font-size: large; width: 150px; background-color: transparent">
-          <div class=" clock2 time">{{remainingTime}}</div>
+<!--        <div class="pt-4"  style="font-size: large; width: 150px">-->
+<!--&lt;!&ndash;          <div class="time">{{remainingTime}}</div>&ndash;&gt;-->
+<!--          <mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>-->
+<!--        </div>-->
+<!--        <div class="clock-container clock2 ml-1 mt-0 pt-1"  style="font-size: large; width: 150px; background-color: transparent">-->
+<!--          <div class=" clock2 time">{{remainingTime}}</div>-->
 <!--          <mat-progress-bar mode="mode" [color]="'INFO'" [value]="value">{{remainingTime}}</mat-progress-bar>-->
           <!-- <mat-progress-spinner
             class="example-margin"
@@ -247,7 +247,7 @@
             [mode]="mode"
             [value]="value">
           </mat-progress-spinner> -->
-        </div>
+<!--        </div>-->
         <div class="clock-container clock2 ml-1 mt-0 pt-1" *ngIf="alwaysTime" style="font-size: large; width: 150px">
           <div class="time">{{alwaysTime}}</div>
         </div>

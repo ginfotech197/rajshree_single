@@ -75,8 +75,9 @@
               <div class="d-flex" style="">
                 <div class="col-4"></div>
                 <div class="" style="border: 5px solid white; width: 200px;border-style: double; border-radius: 10px;">
-                  <div style="color: white; font-weight: bold; font-size: x-large; background-color: red; border: 1px solid black; border-radius: 5px;">02:00</div>
-                  <div style="color: white; font-weight: bold; font-size: x-large; background-color: yellow; border: 1px solid black; border-radius: 5px;">02:00</div>
+                  <div style="color: white; font-weight: bold; font-size: x-large; background-color: red; border: 1px solid black; border-radius: 5px;">{{remainingTime}}</div>
+                  <div [hidden]="value>100" style="color: white; font-weight: bold; font-size: x-large; background-color: yellow; border: 1px solid black; border-radius: 5px;"><mat-progress-bar [color]="color" class="green-progress" mode="determinate"  [value]="value"></mat-progress-bar></div>
+                  <div [hidden]="value<=100" style="color: white; font-weight: bold; font-size: x-large; background-color: yellow; border: 1px solid black; border-radius: 5px;"><mat-progress-bar [color]="color" class="green-progress" mode="indeterminate"  [value]="value"></mat-progress-bar></div>
                 </div>
                 <div class="col-3"></div>
               </div>

@@ -20,6 +20,8 @@ import {WatchDrawService} from '../../services/watch-draw.service';
 import { NgxWheelComponent, TextAlignment, TextOrientation } from 'ngx-wheel';
 import {NextDrawId} from '../../models/NextDrawId.model';
 import {TodayLastResult} from '../../models/TodayLastResult.model';
+import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
+import {ThemePalette} from '@angular/material/core';
 
 
 @Component({
@@ -35,8 +37,13 @@ export class TerminalComponent implements OnInit {
   textOrientation: TextOrientation = TextOrientation.HORIZONTAL;
   textAlignment: TextAlignment = TextAlignment.OUTER;
 
+  // for progressbar
+  value = 0;
+  // color: ThemePalette = 'warn';
+  color: ThemePalette = 'accent';
 
   projectData: ProjectData;
+  remainingTime: number;
   alwaysTime: number;
   showDeveloperDiv = true;
   user: User;
@@ -105,6 +112,14 @@ export class TerminalComponent implements OnInit {
     // audio.src = "sound/Wheel.wav";
     // audio.load();
     // audio.play();
+
+    this.commonService.remainingTimeBehaviorSubject.asObservable().subscribe(response => {
+      this.remainingTime = response;
+      console.log(this.remainingTime);
+      const x = String(this.remainingTime).split(':');
+      // tslint:disable-next-line:radix
+      this.value = (((parseInt(x[1]) * 60) + parseInt(x[2] + ((parseInt(x[0]) * 3600)))) / (15 * 60)) * 100;
+    });
 
     this.idToLandOn = this.seed[Math.floor(Math.random() * this.seed.length)];
     const colors = ['#FFA500', '#8B008B', '#FF1493', '#20B2AA', '#8B0000', '#00FF00', '#e0e000', '#0000FF', '#6A5ACD', '#cd5c5c'];

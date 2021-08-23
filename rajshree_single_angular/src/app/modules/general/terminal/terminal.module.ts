@@ -15,6 +15,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {NgxPrintModule} from 'ngx-print';
 import {NgxWheelModule} from 'ngx-wheel';
+import {MatProgressBar, MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {NgxWheelModule} from 'ngx-wheel';
     MatButtonToggleModule,
     FlexLayoutModule,
     NgxPrintModule,
-    NgxWheelModule
+    NgxWheelModule,
+    MatProgressBarModule
   ],
   declarations: [
     TerminalComponent
