@@ -176,6 +176,7 @@ export class TerminalComponent implements OnInit {
       const timeDiffMinToSec = this.activeDrawTime.time_diff * 60;
       // tslint:disable-next-line:radix
       this.value = ((hourToSec + minToSec + sec) / timeDiffMinToSec) * 100;
+      // console.log(this.value);
     });
 
 
