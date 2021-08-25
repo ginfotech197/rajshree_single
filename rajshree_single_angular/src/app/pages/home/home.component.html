@@ -21,19 +21,20 @@
   </div>
 
   <div id="table-div" >
-    <div  *ngFor="let tableData of resultList; let i = index">
-      <table class="table" >
+    <div  *ngFor="let tableData of resultList; let i = index" >
+      <table class="table table-responsive">
           <thead>
-            <tr><td style="background-color: #85592e;" colspan="8">{{tableData.date}}</td></tr>
+            <tr><td style="background-color: #85592e;" colspan="12">{{tableData.date}}</td></tr>
           </thead>
-          <tbody>
-            <tr *ngFor="let row of tableData.result.slice(0, tableData.result.length % columnNumber  === 0 ?
-               tableData.result.length / columnNumber : tableData.result.length / columnNumber + 1); let idx = index">
-              <td scope="row" *ngFor="let result of tableData.result.slice(idx * columnNumber, idx * columnNumber + columnNumber)">
-                <div class=" result-heading">{{result.end_time.slice(0,5)}}</div>
-<!--                <div class="bd-highlight">{{result.visible_triple_number || '***'}}</div>-->
-                <div class="bd-highlight">{{(result.single_number!=null && result.single_number>=0) ?  result.single_number : '*'}}</div>
-              </td>
+          <tbody >
+            <tr>
+              <div style="max-width: 1346px; overflow: scroll;">
+                <td scope="row" *ngFor="let result of tableData.result" >
+                  <div class=" result-heading">{{result.end_time.slice(0,5)}}</div>
+  <!--                <div class="bd-highlight">{{result.visible_triple_number || '***'}}</div>-->
+                  <div class="bd-highlight">{{(result.single_number!=null && result.single_number>=0) ?  result.single_number : '*'}}</div>
+                </td>
+              </div>
             </tr>
           </tbody>
       </table>
