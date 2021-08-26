@@ -178,8 +178,10 @@
         background-color: #eae6e6;
         tr{
           td{
-            font-size: 41px;
-            padding: 5px !important;
+            width: 1% !important;
+            height: 20px !important;
+            // font-size: 41px;
+            // padding: 5px !important;
           }
         }
       }
@@ -231,7 +233,7 @@ ngb-carousel{
 
 
 .result-heading{
-  background-color: rgb(245, 106, 56);
+  background-color: rgb(206, 0, 161);
   color: white;
 }
 

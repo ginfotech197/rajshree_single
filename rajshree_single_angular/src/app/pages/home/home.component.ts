@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   deviceXs: boolean;
   showDevArea = false;
   isProduction = environment.production;
-  // columnNumber = 8;
+  columnNumber = 14;
 
   nextDrawId: any;
 

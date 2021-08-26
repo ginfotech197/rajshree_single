@@ -8,7 +8,7 @@
   </div>
 
   <div id="title-3-div">
-    <div id="title-3-div-child-1">Kolkata 1st Today Result Sabse Pahle Dekho</div>
+    <div id="title-3-div-child-1">1st Today Result Sabse Pahle Dekho</div>
     <div id="title-3-div-child-2">{{currentDate}}<br><button type="button" class="btn btn-danger glow" [routerLink]="['/player']" style="font-size: x-large;border: 5px solid yellow; border-style: double; border-radius: 10px;">Play Online</button></div>
   </div>
 
@@ -22,19 +22,20 @@
 
   <div id="table-div" >
     <div  *ngFor="let tableData of resultList; let i = index" >
-      <table class="table table-responsive">
+      <table class="table">
           <thead>
-            <tr><td style="background-color: #85592e;" colspan="12">{{tableData.date}}</td></tr>
+            <tr><td style="background-color: #85592e;" colspan="18">{{tableData.date}}</td></tr>
           </thead>
           <tbody >
-            <tr>
-              <div style="max-width: 1346px; overflow: scroll;">
-                <td scope="row" *ngFor="let result of tableData.result" >
+            <tr *ngFor="let row of tableData.result.slice(0, tableData.result.length % columnNumber  === 0 ?
+            tableData.result.length / columnNumber : tableData.result.length / columnNumber + 1); let idx = index">
+
+                <td scope="row" *ngFor="let result of tableData.result.slice(idx * columnNumber, idx * columnNumber + columnNumber)" >
                   <div class=" result-heading">{{result.end_time.slice(0,5)}}</div>
   <!--                <div class="bd-highlight">{{result.visible_triple_number || '***'}}</div>-->
-                  <div class="bd-highlight">{{(result.single_number!=null && result.single_number>=0) ?  result.single_number : '*'}}</div>
+                  <div class="bd-highlight" style="font-size: 50px; background-color: rgb(248, 220, 178);">{{(result.single_number!=null && result.single_number>=0) ?  result.single_number : '*'}}</div>
                 </td>
-              </div>
+
             </tr>
           </tbody>
       </table>
