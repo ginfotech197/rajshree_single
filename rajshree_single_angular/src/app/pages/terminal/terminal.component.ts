@@ -138,6 +138,7 @@ export class TerminalComponent implements OnInit {
     this.playGameService.getSingleNumberListener().subscribe((response: SingleNumber[]) => {
       this.singleNumbers = response;
       this.copySingleNumber = JSON.parse(JSON.stringify(this.singleNumbers));
+      console.log('single_number: ',this.singleNumbers);
     });
 
     this.commonService.currentTimeBehaviorSubject.asObservable().subscribe(response => {
@@ -265,6 +266,7 @@ export class TerminalComponent implements OnInit {
 
 
   saveUserPlayInputDetails(){
+    console.log(this.userGameInput);
     Swal.fire({
       title: 'Confirmation',
       text: 'Do you sure to buy ticket?',

@@ -9,4 +9,5 @@ export class SingleNumber{
     visibleTripleNumber: string
     quantity?: number
   }[];
+  // singleNumber: number;
 }
