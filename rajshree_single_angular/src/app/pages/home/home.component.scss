@@ -235,3 +235,19 @@ ngb-carousel{
   color: white;
 }
 
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 0.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #f8f8f8, 0 0 70px #ffffff;
+  }
+
+  to {
+    text-shadow: 0 0 20px rgb(253, 250, 86), 0 0 30px #ffdf2a, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
