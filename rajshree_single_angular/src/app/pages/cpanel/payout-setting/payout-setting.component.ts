@@ -30,10 +30,15 @@ export class PayoutSettingComponent implements OnInit {
       // @ts-ignore
       this.dataSource = new MatTableDataSource(x);
     });
+
+    const x = this.gameTypes.filter(x => x.gameTypeId === 1);
+    // @ts-ignore
+    this.dataSource = new MatTableDataSource(x);
   }
 
 
   ngOnInit(): void {
+    this.gameTypes = this.gameTypeService.getGameType();
   }
 
   updateTerminal(){
