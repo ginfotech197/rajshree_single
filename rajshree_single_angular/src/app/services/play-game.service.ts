@@ -42,23 +42,23 @@ export class PlayGameService {
 
     const userData: User =  JSON.parse(localStorage.getItem('user'));
     // console.log('play game service calling', userData);
-    if (userData !== null){
+    // if (userData !== null){
       // get single numbers
-      this.http.get(this.BASE_API_URL + '/singleNumbers').subscribe((response: ServerResponse) => {
+      this.http.get(this.BASE_API_URL + '/dev/singleNumbers').subscribe((response: ServerResponse) => {
         this.singleNumbers = response.data;
         this.singleNumberSubject.next([...this.singleNumbers]);
       });
 
-      this.http.get(this.BASE_API_URL + '/numberCombinations/matrix').subscribe((response: ServerResponse) => {
+    this.http.get(this.BASE_API_URL + '/dev/numberCombinations/matrix').subscribe((response: ServerResponse) => {
         this.numberCombinationMatrix = response.data;
         this.numberCombinationMatrixSubject.next([...this.numberCombinationMatrix]);
       });
 
-      this.http.get(this.BASE_API_URL + '/results/currentDate').subscribe((response: ServerResponse) => {
+    this.http.get(this.BASE_API_URL + '/dev/results/currentDate').subscribe((response: ServerResponse) => {
         this.currentDateResult = response.data;
         this.currentDateResultSubject.next({...this.currentDateResult});
       });
-    }
+    // }
 
 
     // get active draw
@@ -104,7 +104,7 @@ export class PlayGameService {
   }
 
   getTodayResult(){
-    this.http.get(this.BASE_API_URL + '/results/currentDate').subscribe((response: ServerResponse) => {
+    this.http.get(this.BASE_API_URL + '/dev/results/currentDate').subscribe((response: ServerResponse) => {
       this.currentDateResult = response.data;
       this.currentDateResultSubject.next({...this.currentDateResult});
     });
