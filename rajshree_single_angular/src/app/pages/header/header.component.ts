@@ -57,7 +57,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     this.commonService.remainingTimeBehaviorSubject.asObservable().subscribe(response => {
       this.remainingTime = response;
-      console.log(this.remainingTime);
       const x = String(this.remainingTime).split(':');
       // tslint:disable-next-line:radix
       this.value = (((parseInt(x[1])*60)+parseInt(x[2]))/(15*60))*100;

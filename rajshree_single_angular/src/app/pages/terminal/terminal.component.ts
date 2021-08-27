@@ -57,6 +57,8 @@ export class TerminalComponent implements OnInit {
   todayLastResult: TodayLastResult;
   nextDrawId: NextDrawId;
 
+  customInput: number;
+
   columnNumber = 5;
   columnNumber2 = 8;
   columnNumber3 = 1;
@@ -138,7 +140,7 @@ export class TerminalComponent implements OnInit {
     this.playGameService.getSingleNumberListener().subscribe((response: SingleNumber[]) => {
       this.singleNumbers = response;
       this.copySingleNumber = JSON.parse(JSON.stringify(this.singleNumbers));
-      console.log('single_number: ',this.singleNumbers);
+      console.log('single_number: ', this.singleNumbers);
     });
 
     this.commonService.currentTimeBehaviorSubject.asObservable().subscribe(response => {
@@ -212,6 +214,27 @@ export class TerminalComponent implements OnInit {
     this.activeTripleContainerValue = i;
   }
 
+  setValue(points, value){
+    // tslint:disable-next-line:radix
+    this.customInput = parseInt(points) ;
+    // this.setGameInputSet(value,1,1);
+
+    const tempPlayDetails = {
+      gameTypeId: 1,
+      numberCombinationId: value.numberCombinationId,
+      singleNumberId: value.singleNumberId,
+      quantity: this.customInput,
+      mrp: 1
+    };
+    this.userGameInput.push(tempPlayDetails);
+    value.quantity = this.customInput;
+    this.customInput = null;
+
+    this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
+    {
+      return a + b;
+    });
+  }
 
   setGameInputSet(value, idxSingle: number, gameId: number){
 
@@ -234,16 +257,28 @@ export class TerminalComponent implements OnInit {
       this.userGameInput[index].quantity += this.selectedChip;
       value.quantity = this.userGameInput[index].quantity;
     }else{
-
-      const tempPlayDetails = {
-        gameTypeId: gameId,
-        numberCombinationId: value.numberCombinationId,
-        singleNumberId: value.singleNumberId,
-        quantity: this.selectedChip,
-        mrp: 1
-      };
-      this.userGameInput.push(tempPlayDetails);
-      value.quantity = this.selectedChip;
+      if(this.customInput){
+        const tempPlayDetails = {
+          gameTypeId: gameId,
+          numberCombinationId: value.numberCombinationId,
+          singleNumberId: value.singleNumberId,
+          quantity: this.customInput,
+          mrp: 1
+        };
+        this.userGameInput.push(tempPlayDetails);
+        value.quantity = this.customInput;
+        this.customInput = null;
+      }else{
+        const tempPlayDetails = {
+          gameTypeId: gameId,
+          numberCombinationId: value.numberCombinationId,
+          singleNumberId: value.singleNumberId,
+          quantity: this.selectedChip,
+          mrp: 1
+        };
+        this.userGameInput.push(tempPlayDetails);
+        value.quantity = this.selectedChip;
+      }
     }
 
     this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
