@@ -215,20 +215,40 @@ export class TerminalComponent implements OnInit {
   }
 
   setValue(points, value){
+    let gameId = 1;
+    console.log(value);
     // tslint:disable-next-line:radix
     this.customInput = parseInt(points) ;
     // this.setGameInputSet(value,1,1);
 
-    const tempPlayDetails = {
-      gameTypeId: 1,
-      numberCombinationId: value.numberCombinationId,
-      singleNumberId: value.singleNumberId,
-      quantity: this.customInput,
-      mrp: 1
-    };
-    this.userGameInput.push(tempPlayDetails);
-    value.quantity = this.customInput;
-    this.customInput = null;
+    let index = -1;
+
+    if (gameId == 1){
+      index = this.userGameInput.findIndex(x => x.singleNumberId === value.singleNumberId);
+      // tslint:disable-next-line:triple-equals
+    }else if (gameId == 2){
+      index = this.userGameInput.findIndex(x => x.numberCombinationId === value.numberCombinationId);
+    }
+
+    // index = this.userGameInput.findIndex(x => x.singleNumberId === value.singleNumberId);
+    if(index > -1){
+      this.userGameInput[index].quantity = this.customInput;
+      value.quantity = this.userGameInput[index].quantity;
+      this.customInput = null;
+    }else{
+      const tempPlayDetails = {
+        gameTypeId: 1,
+        numberCombinationId: value.numberCombinationId,
+        singleNumberId: value.singleNumberId,
+        quantity: this.customInput,
+        mrp: 1
+      };
+      this.userGameInput.push(tempPlayDetails);
+      value.quantity = this.customInput;
+      this.customInput = null;
+    }
+
+    console.log(this.userGameInput);
 
     this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
     {
@@ -237,9 +257,10 @@ export class TerminalComponent implements OnInit {
   }
 
   setGameInputSet(value, idxSingle: number, gameId: number){
+    // console.log();
 
     console.log(value);
-    // console.log();
+
 
     const numberWiseTotalQuantity = this.selectedChip;
     // tslint:disable-next-line:triple-equals
@@ -257,18 +278,6 @@ export class TerminalComponent implements OnInit {
       this.userGameInput[index].quantity += this.selectedChip;
       value.quantity = this.userGameInput[index].quantity;
     }else{
-      if(this.customInput){
-        const tempPlayDetails = {
-          gameTypeId: gameId,
-          numberCombinationId: value.numberCombinationId,
-          singleNumberId: value.singleNumberId,
-          quantity: this.customInput,
-          mrp: 1
-        };
-        this.userGameInput.push(tempPlayDetails);
-        value.quantity = this.customInput;
-        this.customInput = null;
-      }else{
         const tempPlayDetails = {
           gameTypeId: gameId,
           numberCombinationId: value.numberCombinationId,
@@ -278,7 +287,6 @@ export class TerminalComponent implements OnInit {
         };
         this.userGameInput.push(tempPlayDetails);
         value.quantity = this.selectedChip;
-      }
     }
 
     this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
