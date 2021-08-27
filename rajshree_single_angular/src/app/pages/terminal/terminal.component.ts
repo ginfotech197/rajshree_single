@@ -212,10 +212,11 @@ export class TerminalComponent implements OnInit {
     this.activeTripleContainerValue = i;
   }
 
+
   setGameInputSet(value, idxSingle: number, gameId: number){
 
     console.log(value);
-    console.log('single_number: ',this.singleNumbers);
+    // console.log();
 
     const numberWiseTotalQuantity = this.selectedChip;
     // tslint:disable-next-line:triple-equals

@@ -10,4 +10,5 @@ export class SingleNumber{
     quantity?: number
   }[];
   // singleNumber: number;
+  quantity: any;
 }
