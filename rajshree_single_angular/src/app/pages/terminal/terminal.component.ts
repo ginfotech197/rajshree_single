@@ -62,7 +62,7 @@ export class TerminalComponent implements OnInit {
   columnNumber3 = 1;
 
   public activeTripleContainerValue = 0;
-  public selectedChip = 2;
+  public selectedChip = 10;
   copyNumberMatrix: SingleNumber[];
   copySingleNumber: SingleNumber[];
   isProduction = environment.production;
@@ -213,6 +213,10 @@ export class TerminalComponent implements OnInit {
   }
 
   setGameInputSet(value, idxSingle: number, gameId: number){
+
+    console.log(value);
+    console.log('single_number: ',this.singleNumbers);
+
     const numberWiseTotalQuantity = this.selectedChip;
     // tslint:disable-next-line:triple-equals
     let index = -1;

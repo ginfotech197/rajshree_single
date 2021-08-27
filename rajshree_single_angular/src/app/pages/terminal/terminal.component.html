@@ -16,7 +16,7 @@
 
               <tbody>
                 <tr>
-                  <td><div style="background-color: red;border: 6px solid white; border-radius: 10px; color: white; font-weight:bold ; border-style: double;width: 100%;">{{singleNumbers[9].singleNumber}}<br><input type="text" value="" style="width: 90%; border-radius: 5px; height: 39px;" maxlength = "40"></div></td>
+                  <td><div style="background-color: red;border: 6px solid white; border-radius: 10px; color: white; font-weight:bold ; border-style: double;width: 100%;">{{singleNumbers[9].singleNumber}}<br><input type="text" (change)="setGameInputSet(singleNumbers[9],1,1)" value="" style="width: 90%; border-radius: 5px; height: 39px;" maxlength = "40"></div></td>
                   <td><div style="background-color: red;border: 6px solid white; border-radius: 10px; color: white; font-weight:bold ; border-style:  double;width: 100%;">{{singleNumbers[0].singleNumber}}<br><input type="text" value="" style="width: 90%; border-radius:5px; height: 39px;" maxlength = "40"></div> </td>
                   <td><div style="background-color: red; border: 6px solid white; border-radius: 10px; color: white; font-weight:bold ; border-style:  double;width: 100%;">{{singleNumbers[1].singleNumber}}<br><input type="text" value="" style="width: 90%; border-radius:5px; height: 39px;" maxlength = "40"></div></td>
                 </tr>
@@ -82,6 +82,11 @@
                 <div class="col-3"></div>
               </div>
             </div>
+              <div class="d-flex justify-content-between" style="background-color: rgb(255, 230, 0);height: 43px; border: 5px solid rgb(247, 38, 84); border-style: double; width: 105%; color: white;margin: 10px" >
+                <button matBadge="{{single.quantity}}"  style="color: rgb(28, 12, 90); font-weight: bold; "
+                        *ngFor="let single of singleNumbers; let i=index" (click)="setGameInputSet(single,1,1)"
+                        class="single-number-button-{{i}}" type="button">{{ single.singleNumber }}</button>
+              </div>
               <div style="padding-top: 15px; padding-right: 15px;">
                 <div class="d-flex" style="background-image: url('assets/images/number-background.png'); background-repeat: no-repeat;background-size: cover; padding-bottom: 20px;  width: 435px;
                 margin-left: %;padding-right: 20px;">
