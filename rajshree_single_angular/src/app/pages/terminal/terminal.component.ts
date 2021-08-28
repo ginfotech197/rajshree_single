@@ -224,7 +224,7 @@ export class TerminalComponent implements OnInit {
   }
 
   setValue(points, value){
-    let gameId = 1;
+    const gameId = 1;
     // tslint:disable-next-line:radix
     this.customInput = parseInt(points) ;
     // this.setGameInputSet(value,1,1);
@@ -239,7 +239,7 @@ export class TerminalComponent implements OnInit {
     }
 
     // index = this.userGameInput.findIndex(x => x.singleNumberId === value.singleNumberId);
-    if(index > -1){
+    if (index > -1){
       this.userGameInput[index].quantity = this.customInput;
       value.quantity = this.userGameInput[index].quantity;
       this.customInput = null;
@@ -255,18 +255,21 @@ export class TerminalComponent implements OnInit {
       value.quantity = this.customInput;
       this.customInput = null;
     }
+
     this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
     {
       // const x = this.gameTypes[0].mrp * ( a + b );
       return (a + b);
     });
+
+    if (this.totalTicketPurchased){
+      this.totalTicketPurchased = this.totalTicketPurchased * this.gameTypes[0].mrp;
+    }
+
   }
 
   setGameInputSet(value, idxSingle: number, gameId: number){
     // console.log();
-
-    console.log(value);
-
 
     const numberWiseTotalQuantity = this.selectedChip;
     // tslint:disable-next-line:triple-equals
@@ -289,7 +292,7 @@ export class TerminalComponent implements OnInit {
           numberCombinationId: value.numberCombinationId,
           singleNumberId: value.singleNumberId,
           quantity: this.selectedChip,
-          mrp: 1
+          mrp: this.gameTypes[0].mrp
         };
         this.userGameInput.push(tempPlayDetails);
         value.quantity = this.selectedChip;
@@ -299,6 +302,9 @@ export class TerminalComponent implements OnInit {
     {
       return a + b;
     });
+    if (this.totalTicketPurchased){
+      this.totalTicketPurchased = this.totalTicketPurchased * this.gameTypes[0].mrp;
+    }
   }
 
   changeChip(value){
@@ -320,7 +326,6 @@ export class TerminalComponent implements OnInit {
 
 
   saveUserPlayInputDetails(){
-    console.log(this.userGameInput);
     Swal.fire({
       title: 'Confirmation',
       text: 'Do you sure to buy ticket?',
