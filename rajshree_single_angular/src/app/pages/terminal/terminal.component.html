@@ -12,7 +12,7 @@
             <div class="col-3"></div>
             <div class="col-3" style="background-color: red; background-size: cover; color: white;">1</div>
             <div class="col-3"></div> -->
-            <table class="table " style=" text-align: center; background-color: rgba(255, 47, 144, 0.507);">
+            <table class="table mt-3" style=" text-align: center; background-color: rgba(255, 47, 144, 0.507);">
 
               <tbody>
                 <tr>
@@ -37,14 +37,14 @@
                 </tr>
               </tbody>
             </table>
-            <div class=" d-flex" style="height: 60px; border-radius: 10px;">
+            <div class=" d-flex mt-5" style="height: 40px; border-radius: 10px; ">
               <button style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double;" class="btn btn-danger ml-1 btn-responsive" [routerLink]="['/terminalReport']">REPORT</button>
               <button class="btn btn-info ml-1 btn-responsive" id="print-button" style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double;"
                       [printStyle]="{h1 : {'color': 'red'}, h2 : {'border': 'solid 3px'}}" printSectionId="print-section" ngxPrint>PRINT</button>
             </div>
             <div class="col-4" style="" >
               <div class="left-div" style="padding-top: ;" >
-               <span class="d-flex" style="padding-left: 25px; margin-top: 70px;" ><h4 style="font-weight: bolder; font-size: large; padding-top: 30px; padding-left: 150px;color: white;">{{totalTicketPurchased}}</h4></span>
+               <span class="d-flex" style="padding-left: 25px; margin-top: 40px;" ><h4 style="font-weight: bolder; font-size: large; padding-top: 30px; padding-left: 150px;color: white;">{{totalTicketPurchased}}</h4></span>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
 
         <div fxFlex="30">
           <div class="text-center" style="">
-            <div style="padding-top: 45px;text-align: center; background-repeat: no-repeat;min-height: 100px;font-weight: bold; ">
+            <div style="padding-top: 55px;text-align: center; background-repeat: no-repeat;min-height: 100px;font-weight: bold; ">
 
                 <ngx-wheel
                 #wheel
@@ -76,7 +76,7 @@
 
               >
             </ngx-wheel>
-            <div class="mt-5" style="text-align: center; margin-top: 23px !important; ">
+            <div class="mt-5" style="text-align: center; margin-top: 40px !important; ">
               <div class="d-flex" style="">
                 <div class="col-1"></div>
                 <div class="" style="border: 5px solid white; min-width: 85%;border-style: double; border-radius: 10px;">
@@ -92,10 +92,10 @@
 <!--                        *ngFor="let single of singleNumbers; let i=index" (click)="setGameInputSet(single,1,1)"-->
 <!--                        class="single-number-button-{{i}}" type="button">{{ single.singleNumber }}</button>-->
 <!--              </div>-->
-              <div style="padding-top: 15px; padding-right: 15px;">
+              <div style="padding-top: 35px; padding-right: 15px;">
                 <div class="d-flex" style="background-image: url('assets/images/number-background.png'); background-repeat: no-repeat;background-size: cover; padding-bottom: 20px;  width: 435px;
-                margin-left: %;padding-right: 20px;">
-                  <div class="chips-outer-div " style="padding-top: 8%; padding-left: 25%;">
+                margin-left:10%;padding-right: 20px;">
+                  <div class="chips-outer-div " style="padding-top: 8%; padding-left: 16%;">
                     <input *ngFor="let x of chips; let i= index" class="chips-button-{{i}}" [ngClass]="(selectedChip==x)?'selectedChipStyle':''" mat-fab value="bold" type="button" value="" (click)="changeChip(x)">
                   </div>
                 </div>
@@ -113,7 +113,7 @@
 
 
 
-        <div fxFlex="35" class=" ml-2 mt-5" style=" color: white; font-weight: bold;padding-top: 10px;">
+        <div fxFlex="35" class=" ml-2" style=" color: white; font-weight: bold;padding-top: 35px;">
           <div class="container right-container" >
             <table class="" >
               <thead >
@@ -147,9 +147,14 @@
 
             </tbody>
           </table>
-          <div class=" d-flex" style="height: 40px; border-radius: 10px;text-align: center; padding-left: 100px;">
-            <button style="font-size: 100%; width: 50%;text-align: center; border: 8px solid rgb(255, 255, 255);border-style: double;" class="btn btn-lg  btn-responsive btn-primary">INFO</button>
-            <button (click)="resetMatrixValue()" style="font-size: 100%;  width: 50%;  border: 8px solid rgb(253, 253, 253); border-style: double;" class="btn btn-success ml-1 btn-responsive">CLEAR</button>
+          <!-- <div class=" d-flex" style="height: 60px; border-radius: 10px;">
+            <button style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double;" class="btn btn-lg  btn-responsive btn-primary">INFO</button>
+            <button class="btn btn-success ml-1 btn-responsive"  style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double;"
+                      (click)="resetMatrixValue()">CLEAR</button>
+          </div> -->
+          <div class="d-flex mt-5" style="height: 60px; border-radius: 10px; padding-left: 100px;">
+            <button style="font-size: 100%; width: 50%;text-align: center; border: 8px solid rgb(255, 255, 255);border-style: double; height: 145%;" class="btn btn-lg  btn-responsive btn-primary">INFO</button>
+            <button (click)="resetMatrixValue()" style="font-size: 100%;  width: 50%;  border: 8px solid rgb(253, 253, 253); border-style: double; height: 145%;" class="btn btn-success ml-1 btn-responsive">CLEAR</button>
           </div>
           <!-- <div class=" d-flex" style="height: 60px; border-radius: 10px;padding-top: 20px; padding-left: 97px;">
             <button style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double;" class="btn btn-danger ml-1 btn-responsive" [routerLink]="['/terminalReport']">REPORT</button>

@@ -60,7 +60,7 @@ export class TerminalComponent implements OnInit {
   customInput: number;
 
   columnNumber = 5;
-  columnNumber2 = 10;
+  columnNumber2 = 8;
   columnNumber3 = 1;
 
   public activeTripleContainerValue = 0;
