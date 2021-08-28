@@ -313,8 +313,7 @@ export class TerminalComponent implements OnInit {
 
   resetMatrixValue(){
     this.userGameInput = [];
-    this.numberCombinationMatrix = JSON.parse(JSON.stringify(this.copyNumberMatrix));
-    this.singleNumbers = JSON.parse(JSON.stringify(this.copySingleNumber));
+    this.singleNumbers = this.copySingleNumber;
     this.totalTicketPurchased = 0;
   }
 

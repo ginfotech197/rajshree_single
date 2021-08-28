@@ -1,1050 +1,0 @@
-[2021-08-22 21:20:05] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-2021-08-22' for key 'result_masters_draw_master_id_game_date_unique' (SQL: insert into `result_masters` (`draw_master_id`, `number_combination_id`, `game_date`, `updated_at`, `created_at`) values (1, 125, 2021-08-22 00:00:00, 2021-08-22 21:20:03, 2021-08-22 21:20:03)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-2021-08-22' for key 'result_masters_draw_master_id_game_date_unique' (SQL: insert into `result_masters` (`draw_master_id`, `number_combination_id`, `game_date`, `updated_at`, `created_at`) values (1, 125, 2021-08-22 00:00:00, 2021-08-22 21:20:03, 2021-08-22 21:20:03)) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(486): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(438): Illuminate\\Database\\Connection->statement()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2964): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1617): Illuminate\\Database\\Query\\Builder->insertGetId()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1123): Illuminate\\Database\\Eloquent\\Builder->__call()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1088): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(929): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#9 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\ResultMasterController.php(93): Illuminate\\Database\\Eloquent\\Model->save()
-#10 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\CentralController.php(28): App\\Http\\Controllers\\ResultMasterController->save_auto_result()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\CentralController->createResult()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#54 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#55 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#56 {main}
-
-[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-2021-08-22' for key 'result_masters_draw_master_id_game_date_unique' at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:485)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(485): PDOStatement->execute()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(486): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(438): Illuminate\\Database\\Connection->statement()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2964): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1617): Illuminate\\Database\\Query\\Builder->insertGetId()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1123): Illuminate\\Database\\Eloquent\\Builder->__call()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1088): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(929): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#11 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\ResultMasterController.php(93): Illuminate\\Database\\Eloquent\\Model->save()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\CentralController.php(28): App\\Http\\Controllers\\ResultMasterController->save_auto_result()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\CentralController->createResult()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-"} 
-[2021-08-22 21:20:14] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-2021-08-22' for key 'result_masters_draw_master_id_game_date_unique' (SQL: insert into `result_masters` (`draw_master_id`, `number_combination_id`, `game_date`, `updated_at`, `created_at`) values (1, 63, 2021-08-22 00:00:00, 2021-08-22 21:20:14, 2021-08-22 21:20:14)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-2021-08-22' for key 'result_masters_draw_master_id_game_date_unique' (SQL: insert into `result_masters` (`draw_master_id`, `number_combination_id`, `game_date`, `updated_at`, `created_at`) values (1, 63, 2021-08-22 00:00:00, 2021-08-22 21:20:14, 2021-08-22 21:20:14)) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(486): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(438): Illuminate\\Database\\Connection->statement()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2964): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1617): Illuminate\\Database\\Query\\Builder->insertGetId()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1123): Illuminate\\Database\\Eloquent\\Builder->__call()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1088): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(929): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#9 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\ResultMasterController.php(93): Illuminate\\Database\\Eloquent\\Model->save()
-#10 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\CentralController.php(28): App\\Http\\Controllers\\ResultMasterController->save_auto_result()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\CentralController->createResult()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#54 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#55 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#56 {main}
-
-[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-2021-08-22' for key 'result_masters_draw_master_id_game_date_unique' at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:485)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(485): PDOStatement->execute()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(486): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(438): Illuminate\\Database\\Connection->statement()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2964): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1617): Illuminate\\Database\\Query\\Builder->insertGetId()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1123): Illuminate\\Database\\Eloquent\\Builder->__call()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1088): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(929): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#11 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\ResultMasterController.php(93): Illuminate\\Database\\Eloquent\\Model->save()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\CentralController.php(28): App\\Http\\Controllers\\ResultMasterController->save_auto_result()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\CentralController->createResult()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-"} 
-[2021-08-22 21:21:41] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-
-[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:352)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): PDO->prepare()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#14 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#56 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#57 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#58 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#59 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#60 {main}
-"} 
-[2021-08-22 21:21:51] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-
-[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:352)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): PDO->prepare()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#14 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#56 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#57 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#58 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#59 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#60 {main}
-"} 
-[2021-08-23 20:25:57] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-
-[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:352)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): PDO->prepare()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#14 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#56 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#57 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#58 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#59 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#60 {main}
-"} 
-[2021-08-23 20:25:59] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-
-[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:352)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): PDO->prepare()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#14 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#56 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#57 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#58 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#59 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#60 {main}
-"} 
-[2021-08-23 20:26:05] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-
-[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:352)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): PDO->prepare()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#14 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#56 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#57 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#58 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#59 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#60 {main}
-"} 
-[2021-08-23 20:26:09] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist (SQL: select * from `next_game_draws` limit 1) at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#12 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#56 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#57 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#58 {main}
-
-[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rajshree_single_db.next_game_draws' doesn't exist at D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:352)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): PDO->prepare()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2350): Illuminate\\Database\\Connection->select()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2338): Illuminate\\Database\\Query\\Builder->runSelect()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2872): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2339): Illuminate\\Database\\Query\\Builder->onceWithColumns()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(602): Illuminate\\Database\\Query\\Builder->get()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(586): Illuminate\\Database\\Eloquent\\Builder->getModels()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->first()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1996): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2008): Illuminate\\Database\\Eloquent\\Model->__call()
-#14 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(17): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#45 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#47 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#49 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#50 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#51 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#52 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#53 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#54 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#55 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#56 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#57 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#58 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#59 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#60 {main}
-"} 
-[2021-08-23 20:26:19] local.ERROR: Attempt to read property "next_draw_id" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"next_draw_id\" on null at D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php:18)
-[stacktrace]
-#0 D:\ajshree_single\ajshree_single_api\\app\\Http\\Controllers\\NextGameDrawController.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
-#1 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\NextGameDrawController->getNextDrawIdOnly()
-#2 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
-#3 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#4 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
-#5 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
-#6 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#7 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#8 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#9 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#10 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#11 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#12 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#13 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(33): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#14 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#15 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#16 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(34): Illuminate\\Pipeline\\Pipeline->then()
-#17 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#18 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#19 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then()
-#20 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack()
-#21 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute()
-#22 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute()
-#23 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch()
-#24 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#25 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#26 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#27 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#28 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#30 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#31 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#32 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#33 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#34 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#35 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#36 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#37 D:\ajshree_single\ajshree_single_api\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
-#39 D:\ajshree_single\ajshree_single_api\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#40 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
-#41 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#42 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then()
-#43 D:\ajshree_single\ajshree_single_api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#44 D:\ajshree_single\ajshree_single_api\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
-#45 D:\ajshree_single\ajshree_single_api\\server.php(21): require_once('...')
-#46 {main}
-"} 
