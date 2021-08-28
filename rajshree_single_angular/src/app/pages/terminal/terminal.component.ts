@@ -22,6 +22,9 @@ import {NextDrawId} from '../../models/NextDrawId.model';
 import {TodayLastResult} from '../../models/TodayLastResult.model';
 import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
 import {ThemePalette} from '@angular/material/core';
+import {GameType} from '../../models/GameType.model';
+import {MatTableDataSource} from '@angular/material/table';
+import {GameTypeService} from '../../services/game-type.service';
 
 
 @Component({
@@ -51,6 +54,7 @@ export class TerminalComponent implements OnInit {
   numberCombinationMatrix: SingleNumber[] = [];
   activeDrawTime: DrawTime;
   chips: number[] = [];
+  gameTypes: GameType[] = [];
   userGameInput: any[] = [];
   public totalTicketPurchased: number;
   currentDateResult: CurrentGameResult;
@@ -76,7 +80,8 @@ export class TerminalComponent implements OnInit {
   public lastPurchasedTicketTriple: {visibleTripleNumber: number, quantity: number, singleNumber: number}[];
 
   constructor(private playGameService: PlayGameService, private commonService: CommonService, private authService: AuthService,
-              private ngxPrinterService: NgxPrinterService, private renderer: Renderer2, private watchDrawService: WatchDrawService
+              private ngxPrinterService: NgxPrinterService, private renderer: Renderer2, private watchDrawService: WatchDrawService,
+              private gameTypeService: GameTypeService
   ) {
 
     // this.renderer.setStyle(document.body, 'background-image', ' url("assets/images/curtain.jpg")');
@@ -105,7 +110,12 @@ export class TerminalComponent implements OnInit {
         }, 2000);
     });
 
-
+    this.gameTypes = this.gameTypeService.getGameType();
+    this.gameTypeService.getGameTypeListener().subscribe((response: GameType[]) => {
+      this.gameTypes = response;
+      this.gameTypes = this.gameTypes.filter(x => x.gameTypeId === 1);
+    });
+    this.gameTypes = this.gameTypes.filter(x => x.gameTypeId === 1);
   }
 
   ngOnInit(): void {
@@ -140,7 +150,6 @@ export class TerminalComponent implements OnInit {
     this.playGameService.getSingleNumberListener().subscribe((response: SingleNumber[]) => {
       this.singleNumbers = response;
       this.copySingleNumber = JSON.parse(JSON.stringify(this.singleNumbers));
-      console.log('single_number: ', this.singleNumbers);
     });
 
     this.commonService.currentTimeBehaviorSubject.asObservable().subscribe(response => {
@@ -215,8 +224,7 @@ export class TerminalComponent implements OnInit {
   }
 
   setValue(points, value){
-    let gameId = 1;
-    console.log(value);
+    const gameId = 1;
     // tslint:disable-next-line:radix
     this.customInput = parseInt(points) ;
     // this.setGameInputSet(value,1,1);
@@ -231,7 +239,7 @@ export class TerminalComponent implements OnInit {
     }
 
     // index = this.userGameInput.findIndex(x => x.singleNumberId === value.singleNumberId);
-    if(index > -1){
+    if (index > -1){
       this.userGameInput[index].quantity = this.customInput;
       value.quantity = this.userGameInput[index].quantity;
       this.customInput = null;
@@ -241,26 +249,27 @@ export class TerminalComponent implements OnInit {
         numberCombinationId: value.numberCombinationId,
         singleNumberId: value.singleNumberId,
         quantity: this.customInput,
-        mrp: 1
+        mrp: this.gameTypes[0].mrp
       };
       this.userGameInput.push(tempPlayDetails);
       value.quantity = this.customInput;
       this.customInput = null;
     }
 
-    console.log(this.userGameInput);
-
     this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
     {
-      return a + b;
+      // const x = this.gameTypes[0].mrp * ( a + b );
+      return (a + b);
     });
+
+    if (this.totalTicketPurchased){
+      this.totalTicketPurchased = this.totalTicketPurchased * this.gameTypes[0].mrp;
+    }
+
   }
 
   setGameInputSet(value, idxSingle: number, gameId: number){
     // console.log();
-
-    console.log(value);
-
 
     const numberWiseTotalQuantity = this.selectedChip;
     // tslint:disable-next-line:triple-equals
@@ -283,7 +292,7 @@ export class TerminalComponent implements OnInit {
           numberCombinationId: value.numberCombinationId,
           singleNumberId: value.singleNumberId,
           quantity: this.selectedChip,
-          mrp: 1
+          mrp: this.gameTypes[0].mrp
         };
         this.userGameInput.push(tempPlayDetails);
         value.quantity = this.selectedChip;
@@ -293,6 +302,9 @@ export class TerminalComponent implements OnInit {
     {
       return a + b;
     });
+    if (this.totalTicketPurchased){
+      this.totalTicketPurchased = this.totalTicketPurchased * this.gameTypes[0].mrp;
+    }
   }
 
   changeChip(value){
@@ -314,7 +326,6 @@ export class TerminalComponent implements OnInit {
 
 
   saveUserPlayInputDetails(){
-    console.log(this.userGameInput);
     Swal.fire({
       title: 'Confirmation',
       text: 'Do you sure to buy ticket?',

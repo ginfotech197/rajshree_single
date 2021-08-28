@@ -221,12 +221,12 @@
             <span class="logo" style="color: white;">{{user.userName}}</span>
           </button>
           <div fxLayout="row" class="mb-2 mt-1" style="">
-            <!-- <div *ngIf="!deviceXs">
+             <div *ngIf="!deviceXs">
               <button class=" mt-4 ml-1 mr-1" style="font-size: large;  background-color: rgb(94, 74, 55); border-radius: 5px; width: 80px; text-align: center;" mat-button
-                      [routerLink]="['/']"
+                      [routerLink]="['/terminal']"
                       routerLinkActive="MyActiveMenu"
                       [routerLinkActiveOptions]="{exact: true}">Home</button>
-            </div> -->
+            </div>
             <div class=" mt-2  mb-2" style="font-size: large; border-radius: 5px; width: 80px; text-align: center; color: white;">Balc<br>{{user.balance}}</div>
             <span class="mt-2  mr-5" style="font-size: large;color: white; text-align: center;">Next draw<br>{{activeDrawTime.visibleTime}}</span>
           </div>
@@ -261,7 +261,7 @@
         <span class="logo" style="padding-right: 120px; font-size: small; line-height: 18px !important;"><i class="ri-smartphone-line"></i>Terminal</span>
 
        <mat-menu #menu="matMenu" style="width: 20px !important;">
-         <!-- <button mat-menu-item [routerLink]="['terminal']" routerLinkActive="MyActiveMenu" style="height: 28px ; font-size: small; line-height: 18px !important;" >Home</button> -->
+<!--          <button mat-menu-item [routerLink]="['terminal']" routerLinkActive="MyActiveMenu" style="height: 28px ; font-size: small; line-height: 18px !important;" >Home</button>-->
          <button mat-button *ngIf="isAuthenticated" (click)="logout()" style="font-size: small; line-height: 18px !important;">Logout<i class="ri-logout-circle-r-line ri-1x"></i></button>
        </mat-menu>
     </mat-toolbar-row>
