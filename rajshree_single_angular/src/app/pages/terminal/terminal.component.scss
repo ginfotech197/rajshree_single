@@ -1,6 +1,3 @@
-
-
-
 // $triple-selection-button-0: rgba(203, 155, 125, 0.74);
 // $triple-selection-button-1: rgba(87, 103, 177, 0.55);
 // $triple-selection-button-2: rgba(111, 203, 107, 0.8);
@@ -33,8 +30,7 @@ $triple-button-6: url('/assets/images/nextbtn-7.png');
 $triple-button-7: url('/assets/images/nextbtn-8.png');
 $triple-button-8: url('/assets/images/nextbtn-9.png');
 $triple-button-9: url('/assets/images/nextbtn-10.png');
-
-
+ 
 $single-button-0: url('/assets/images/single/single-0.png');
 $single-button-1: url('/assets/images/single/single-1.png');
 $single-button-2: url('/assets/images/single/single-2.png');
@@ -630,3 +626,22 @@ span .mat-fab .mat-button-wrapper {
   min-height: 20px!important;
 }
 
+.td-style{
+  background-color: red;
+  border: 6px solid white;
+  border-radius: 10px;
+  color: white;
+  font-weight:bold ;
+  border-style: double;
+  width: 100%;
+}
+
+.red-box{
+  background-color: transparent
+}
+
+.input-td{
+  width: 90%;
+  border-radius: 5px;
+  height: 39px;
+}
