@@ -27,6 +27,7 @@ export class TerminalReportComponent implements OnInit {
   EndDateFilter = this.startDate;
   barcodeDetails: BarcodeDetails;
   pipe = new DatePipe('en-US');
+  selectedIndex : number;
 
   terminalReportData: TerminalBarcodeReport[] = [];
   terminalSaleReportData: TerminalSaleReport[] = [];
