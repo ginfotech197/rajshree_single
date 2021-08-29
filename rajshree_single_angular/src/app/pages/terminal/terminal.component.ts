@@ -357,9 +357,9 @@ export class TerminalComponent implements OnInit {
             this.authService.setUserBalanceBy(responseData.play_master.terminal.balance);
             this.resetMatrixValue();
 
-            setTimeout(function() {
-              document.getElementById('print-button').click();
-            }.bind(this), 3000);
+            // setTimeout(function() {
+            //   document.getElementById('print-button').click();
+            // }.bind(this), 3000);
 
           }else{
             Swal.fire({
