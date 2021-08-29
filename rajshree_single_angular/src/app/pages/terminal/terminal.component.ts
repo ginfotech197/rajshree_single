@@ -325,6 +325,22 @@ export class TerminalComponent implements OnInit {
 
 
   saveUserPlayInputDetails(){
+
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    console.log(user.balance);
+
+    if (user.balance < 1){
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Low Balance',
+        showConfirmButton: false,
+        timer: 3000
+      });
+      return;
+    }
+
     Swal.fire({
       title: 'Confirmation',
       text: 'Do you sure to buy ticket?',
