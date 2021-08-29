@@ -8,8 +8,9 @@ export class TerminalBarcodeReport{
   ticket_taken_time?: string;
   total_quantity?: number;
   amount?: number;
-  is_cancelled? : number;
-  is_claimed? : number;
+  is_cancelled?: number;
+  is_claimed?: number;
+  id?: number; // for cancellation update
 
 
 }

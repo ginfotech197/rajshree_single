@@ -32,17 +32,27 @@ export class TerminalReportComponent implements OnInit {
   terminalReportData: TerminalBarcodeReport[] = [];
   terminalSaleReportData: TerminalSaleReport[] = [];
 
-  constructor( private renderer: Renderer2, private terminalReportService: TerminalReportService, private adminReportService:AdminReportService) {
+  // tslint:disable-next-line:max-line-length
+  constructor( private renderer: Renderer2, private terminalReportService: TerminalReportService, private adminReportService: AdminReportService,
+               private commonService: CommonService) {
     this.renderer.setStyle(document.body, 'background-image', 'none');
 
-    this.terminalReportService.terminalListListener().subscribe((response)=>{
+    this.terminalReportService.terminalListListener().subscribe((response) => {
       this.terminalReportData = response;
-    })
-    this.terminalReportService.terminalSaleListListener().subscribe((response)=>{
+    });
+    this.terminalReportService.terminalSaleListListener().subscribe((response) => {
       this.terminalSaleReportData = response;
-    })
+    });
     this.getTerminalBarcodeReport();
     this.getTerminalSaleReport();
+
+    this.commonService.terminalCancelListListener().subscribe((response) => {
+      // tslint:disable-next-line:only-arrow-functions
+      response.forEach(function(value){
+          const z = this.terminalReportData.findIndex(x => x.play_master_id === value.id);
+        this.terminalReportData[z].is_cancelable = 0;
+      });
+    });
   }
 
   ngOnInit(): void {
@@ -66,10 +76,10 @@ export class TerminalReportComponent implements OnInit {
   }
 
   checkBtnEligibility(record){
-    if(record.is_cancelled == 1){
+    if(record.is_cancelled === 1){
       return true;
     }
-    if(record.is_cancelable == 0){
+    if(record.is_cancelable === 0){
       return true;
     }
     return false;

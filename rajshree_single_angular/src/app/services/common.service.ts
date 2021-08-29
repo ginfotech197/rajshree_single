@@ -8,6 +8,7 @@ import {environment} from '../../environments/environment';
 import {catchError, concatMap, tap} from 'rxjs/operators';
 import {DrawTime} from '../models/DrawTime.model';
 import {CPanelCustomerSaleReport} from "../models/CPanelCustomerSaleReport.model";
+import {TerminalBarcodeReport} from '../models/TerminalBarcodeReport.model';
 
 
 
@@ -26,6 +27,7 @@ export class CommonService {
 
   deviceXs = false;
   projectData: ProjectData;
+  barcodeReportRecords: TerminalBarcodeReport[] = [];
   public serverTime: {hour: number, minute: number, second: number, 'meridiem': string};
   public currentTimeObj: {hour: number, minute: number, second: number, 'meridiem': string};
   serverTimeSubject = new Subject<{hour: number, minute: number, second: number, 'meridiem': string}>();
@@ -35,6 +37,12 @@ export class CommonService {
 
   activeDrawTime: DrawTime;
   activeDrawTimeSubject = new Subject<DrawTime>();
+
+  barcodeReportRecordsSubject = new Subject<TerminalBarcodeReport[]>();
+
+  terminalCancelListListener(){
+    return this.barcodeReportRecordsSubject.asObservable();
+  }
 
   constructor(private http: HttpClient) {
 
@@ -124,7 +132,7 @@ export class CommonService {
       // console.log('rm_mn: '+ remainingMin , 'rem_sec' + remainingSec);
 
       if (remainingMin <= 1){
-        this.updateTerminalCancellation().subscribe();
+        this.updateTerminalCancellation();
       }
 
       this.currentTimeBehaviorSubject.next(currentTime);
@@ -172,7 +180,10 @@ export class CommonService {
 
   updateTerminalCancellation(){
     // @ts-ignore
-    return this.http.post( this.BASE_API_URL + '/terminal/updateCancellation');
+    return this.http.post( this.BASE_API_URL + '/terminal/updateCancellation').subscribe((response: {success: number, data: TerminalBarcodeReport[]}) => {
+      const x = response.data;
+      this.barcodeReportRecordsSubject.next([...x]);
+    });
   }
 
   loadValue(i) {
