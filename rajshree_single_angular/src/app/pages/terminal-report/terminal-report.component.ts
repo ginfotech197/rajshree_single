@@ -105,7 +105,7 @@ export class TerminalReportComponent implements OnInit {
           }
         });
         this.terminalReportService.cancelTicket(masterId).subscribe((response)=>{
-          if(response.data){
+          if(response.success == 1){
             Swal.hideLoading();
             Swal.fire({
               icon: 'success',
