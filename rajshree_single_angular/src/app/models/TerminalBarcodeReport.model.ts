@@ -11,6 +11,4 @@ export class TerminalBarcodeReport{
   is_cancelled?: number;
   is_claimed?: number;
   id?: number; // for cancellation update
-
-
 }
