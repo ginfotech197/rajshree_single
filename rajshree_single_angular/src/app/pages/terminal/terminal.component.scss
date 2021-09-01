@@ -30,7 +30,7 @@ $triple-button-6: url('/assets/images/nextbtn-7.png');
 $triple-button-7: url('/assets/images/nextbtn-8.png');
 $triple-button-8: url('/assets/images/nextbtn-9.png');
 $triple-button-9: url('/assets/images/nextbtn-10.png');
- 
+
 $single-button-0: url('/assets/images/single/single-0.png');
 $single-button-1: url('/assets/images/single/single-1.png');
 $single-button-2: url('/assets/images/single/single-2.png');
@@ -583,6 +583,24 @@ span .mat-fab .mat-button-wrapper {
   margin-left: -19px;
 
 //   width: 1000px;
+  height: 80px;
+ }
+
+ .left-div{
+  width: 300px;
+  background-image: url('/assets/images/TripleFun/CancelBet.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -19px;
+  height: 80px;
+ }
+
+ .right-div{
+  width: 300px;
+  background-image: url('/assets/images/TripleFun/CancelBet2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -19px;
   height: 80px;
  }
 
