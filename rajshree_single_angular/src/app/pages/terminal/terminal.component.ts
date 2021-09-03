@@ -264,6 +264,8 @@ export class TerminalComponent implements OnInit {
 
     if (this.totalTicketPurchased){
       this.totalTicketPurchased = this.totalTicketPurchased * this.gameTypes[0].mrp;
+    }else{
+      this.totalTicketPurchased = null;
     }
 
   }
