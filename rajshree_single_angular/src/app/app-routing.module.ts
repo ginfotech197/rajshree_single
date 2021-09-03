@@ -22,7 +22,7 @@ import {MasterStockistComponent} from './pages/cpanel/master-stockist/master-sto
 
 // @ts-ignore
 const routes: Routes = [
-  // {path: '', component: HomeComponent},
+  {path: 'chart', component: HomeComponent},
   {
     path: '',
     loadChildren: () => import('./modules/general/auth/auth.module')
