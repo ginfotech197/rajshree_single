@@ -222,13 +222,12 @@
           </button>
           <div fxLayout="row" class="mb-2 mt-1" style="">
              <div *ngIf="!deviceXs">
-              <button class=" mt-4 ml-1 mr-1" style="font-size: large;  background-color: rgb(94, 74, 55); border-radius: 5px; width: 80px; text-align: center;" mat-button
+              <button class=" mt-4 ml-1 mr-1" style="font-size: large;  background-color: rgb(255, 147, 46); border-radius: 5px; width: 80px; text-align: center; border: 2px solid greenyellow; border-style: dotted;" mat-button
                       [routerLink]="['/terminal']"
                       routerLinkActive="MyActiveMenu"
-                      [routerLinkActiveOptions]="{exact: true}">Home</button>
+                      [routerLinkActiveOptions]="{exact: true}">Result</button>
             </div>
             <div class=" mt-2  mb-2" style="font-size: large; border-radius: 5px; width: 80px; text-align: center; color: white;">Balc<br>{{user.balance}}</div>
-            <span class="mt-2  mr-5" style="font-size: large;color: white; text-align: center;">Next draw<br>{{activeDrawTime.visibleTime}}</span>
           </div>
       </div>
 
@@ -248,7 +247,8 @@
             [value]="value">
           </mat-progress-spinner> -->
 <!--        </div>-->
-        <div class="clock-container clock2 ml-1 mt-0 pt-1" *ngIf="alwaysTime" style="font-size: large; width: 150px">
+        <span class="mt-2  mr-2" style="font-size: large;color: white; text-align: center;">Next draw<br>{{activeDrawTime.visibleTime}}</span>
+        <div class="clock-container clock2 ml-1 mt-3 pt-1" *ngIf="alwaysTime" style="font-size: large; width: 150px">
           <div class="time">{{alwaysTime}}</div>
         </div>
           <button mat-button *ngIf="isAuthenticated" (click)="logout()" style="color: white;">Logout<i class="ri-logout-circle-r-line ri-2x"></i></button>
