@@ -256,11 +256,18 @@ export class TerminalComponent implements OnInit {
       this.customInput = null;
     }
 
-    this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
-    {
-      // const x = this.gameTypes[0].mrp * ( a + b );
-      return (a + b);
+    // this.totalTicketPurchased = this.userGameInput.map(a => a.quantity).reduce(function(a, b)
+    // {
+    //   // const x = this.gameTypes[0].mrp * ( a + b );
+    //   return (a + b);
+    // });
+
+    let x = 0;
+    this.userGameInput.forEach(function(value) {
+      let tempQuantity = (value.quantity)?(value.quantity):0;
+      x = x + tempQuantity;
     });
+    this.totalTicketPurchased = x;
 
     if (this.totalTicketPurchased){
       this.totalTicketPurchased = this.totalTicketPurchased * this.gameTypes[0].mrp;
