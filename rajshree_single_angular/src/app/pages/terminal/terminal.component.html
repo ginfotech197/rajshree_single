@@ -37,11 +37,11 @@
                 </tr>
               </tbody>
             </table>
-            <div style="padding-top: 6px;">
+            <div style="padding-top: 3px;">
               <div class="left-div" style="padding-top: ; margin-left: 20px; text-align: center;" >
                 <span class="d-flex" style="padding-left: 25px; margin-top: 40px;" ><h4 style="font-weight: bolder; font-size: large; padding-top: 30px; padding-left: 150px;color: white;">{{totalTicketPurchased}}</h4></span>
                </div>
-              <div class=" d-flex mt-" style="height: 50px; border-radius: 10px;margin-top: 10px; ">
+              <div class=" d-flex mt-" style="height: 50px; border-radius: 10px;margin-top: 16px; ">
                 <!-- <button style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double;" class="btn btn-danger ml-1 btn-responsive" [routerLink]="['/terminalReport']">REPORT</button> -->
                 <button (click)="resetMatrixValue()" style="font-size: 100%;  width: 50%;  border: 8px solid rgb(253, 253, 253); border-style: double; height: 145%; font-size: 30px;font-weight: bolder;" class="btn btn-success ml-1 btn-responsive">CLEAR</button>
                 <button class="btn btn-info ml-1 btn-responsive" id="print-button" style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double; font-size: 30px;font-weight: bolder;"
@@ -143,8 +143,8 @@
                   <tr *ngFor="let row of currentDateResult.result.slice(0, currentDateResult.result.length % columnNumber2  === 0 ? currentDateResult.result.length / columnNumber2 : currentDateResult.result.length / columnNumber2 + 1); let idx = index">
                     <td scope="row" class="current-result" colspan="2" *ngFor="let result of currentDateResult.result.slice(idx * columnNumber2, idx * columnNumber2 + columnNumber2)" class="text-center align-middle">
                       <div class=" result-heading current-result" style="font-size: larger;">{{result.end_time.slice(0,5)}}</div>
-                      <div class="bd-highlight current-result">
-                        <span *ngIf="result.single_number!=null"></span>{{result.single_number}}
+                      <div class="bd-highlight current-result" style="min-height: 40px;">
+                        <span *ngIf="result.single_number!=null" style="font-size: 55 !important;">{{result.single_number}}</span>
                         <span *ngIf="result.single_number==null" style="font-size: 25px;">
                           <img src="assets/images/singleStar3.gif" height="40px" alt="">
                         </span>
@@ -166,11 +166,16 @@
             <button style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double; font-size: 30px;font-weight: bolder;" class="btn btn-danger mt-1 btn-responsive" [routerLink]="['/terminalReport']">REPORT</button>
 
           </div> -->
-          <div style="padding-top: 6px;">
-            <div class="right-div" style="padding-top: ; margin-left: 60px" >
-              <span class="d-flex" style="padding-left: 25px; margin-top: 40px;" ><h4 style="font-weight: bolder; font-size: large; padding-top: 30px; padding-left: 150px;color: white;"></h4></span>
+          <div style="padding-top: px;">
+            <div class="right-div" style="padding-top: ; margin-left: 60px;" >
+              <span class="d-flex" style="padding-left: 25px; margin-top: 40px;" >
+                <!-- MRP -->
+                <h4 style="font-weight: bolder; font-size: large; padding-top: 35px; padding-left: 100px;color: white;">10</h4>
+                <!-- WIN -->
+                <h4 style="font-weight: bolder; font-size: large; padding-top: 35px; padding-left: 69px;color: white;">90</h4>
+              </span>
              </div>
-            <div class=" d-flex mt-" style="height: 50px; border-radius: 10px;margin-top: 10px; ">
+            <div class=" d-flex mt-" style="height: 50px; border-radius: 10px;margin-top: 16px; ">
               <button style="font-size: 100%; width: 50%;text-align: center; border: 8px solid rgb(255, 255, 255);border-style: double; height: 145%; font-size: 30px;font-weight: bolder;" class="btn btn-lg  btn-responsive btn-primary" [routerLink]="['/terminalReport']"  >INFO</button>
               <button style="font-size: 100%;   width: 50%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double; font-size: 30px;font-weight: bolder;" class="btn btn-danger ml-1 btn-responsive" [routerLink]="['/terminalReport']">REPORT</button>
             </div>
