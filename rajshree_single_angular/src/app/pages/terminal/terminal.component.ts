@@ -359,16 +359,16 @@ export class TerminalComponent implements OnInit {
       return;
     }
 
-    Swal.fire({
-      title: 'Confirmation',
-      text: 'Do you sure to buy ticket?',
-      icon: 'info',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, save It!'
-    }).then((result) => {
-      if (result.isConfirmed){
+    // Swal.fire({
+    //   title: 'Confirmation',
+    //   text: 'Do you sure to buy ticket?',
+    //   icon: 'info',
+    //   showCancelButton: true,
+    //   confirmButtonColor: '#3085d6',
+    //   cancelButtonColor: '#d33',
+    //   confirmButtonText: 'Yes, save It!'
+    // }).then((result) => {
+    //   if (result.isConfirmed){
         const masterData = {
           playMaster: {drawMasterId: this.activeDrawTime.drawId, terminalId: this.user.userId},
           playDetails: this.userGameInput
@@ -408,8 +408,8 @@ export class TerminalComponent implements OnInit {
           // when error occured
           console.log('data saving error', error);
         });
-      }
-    });
+    //   }
+    // });
   }
   // playAudio(){
   //   let audio = new Audio();
