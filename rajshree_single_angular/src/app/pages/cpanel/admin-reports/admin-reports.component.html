@@ -170,18 +170,18 @@
           <button matBadge="{{single.quantity}}" *ngFor="let single of barcodeDetails.single; let i=index" class="mr-2">{{ single.single_number }}</button>
         </div>
 
-        <span *ngIf="barcodeDetails.triple.length">Triple</span>
-        <div class="d-flex flex-row mt-2" *ngFor="let row of barcodeDetails.triple.slice(0, barcodeDetails.triple.length % 10  === 0 ?
-        barcodeDetails.triple.length / 10 : barcodeDetails.triple.length / 10 + 1); let idx = index">
-          <div colspan="2" *ngFor="let x of barcodeDetails.triple.slice(idx * 10, idx * 10 + 10)"
-              class="text-center align-middle mr-3" style="max-width: 100% !important;">
-            <button mat-raised-button matBadge="{{x.quantity}}" [matBadgeHidden]="false"
-                    value="bold" name="fontStyle" aria-label="Font Style"
-                    style="font-size: larger; min-width: 97% !important; padding: 0px !important; min-height: 40px;">
-              {{ x.visible_triple_number }}
-            </button>
-          </div>
-        </div>
+<!--        <span *ngIf="barcodeDetails.triple.length">Triple</span>-->
+<!--        <div class="d-flex flex-row mt-2" *ngFor="let row of barcodeDetails.triple.slice(0, barcodeDetails.triple.length % 10  === 0 ?-->
+<!--        barcodeDetails.triple.length / 10 : barcodeDetails.triple.length / 10 + 1); let idx = index">-->
+<!--          <div colspan="2" *ngFor="let x of barcodeDetails.triple.slice(idx * 10, idx * 10 + 10)"-->
+<!--              class="text-center align-middle mr-3" style="max-width: 100% !important;">-->
+<!--            <button mat-raised-button matBadge="{{x.quantity}}" [matBadgeHidden]="false"-->
+<!--                    value="bold" name="fontStyle" aria-label="Font Style"-->
+<!--                    style="font-size: larger; min-width: 97% !important; padding: 0px !important; min-height: 40px;">-->
+<!--              {{ x.visible_triple_number }}-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
       <!--/.Body-->
 
