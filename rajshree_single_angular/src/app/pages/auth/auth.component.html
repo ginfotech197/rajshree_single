@@ -1,51 +1,60 @@
+<div fxLayout="row " >
+  <div class="container" style="min-width: 5vw; font-size: 10px; color: red;">It's an amusement Game. So the use of this website as a lottery or any other illegal means is strictly prohibited. Viewing this website is at your own risk. All the information shown here is sponsored and we warn you that Amusement Numbers are only for fun. We are not responsible for any issues or scams. We respect all countries, state rules/laws. If you do not agree with our site disclaimer. Please quit our site right now. @Copyright2019 All rights reserved to Rajshree software development co..</div>
+  <div class=""><div fxLayout.xs="column" fxLayout="row" fxFlex="30" fxLayoutAlign="center center" id="login-outer-div">
+
+    <div style="min-height: 65vh">
+      <mat-card fxFlex="95"  class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+
+       <mat-card-content>
+          <div id="content">
+
+            <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+            <form  [formGroup]="loginForm"  *ngIf="!isLoading">
+              <h1>{{loginType}} Login</h1>
+  <!--            <mat-error>User ID or Password is wrong</mat-error>-->
+              <mat-form-field>
+                <input type="text" matInput formControlName="email" id="email" placeholder="User ID">
+  <!--              <input type="text" matInput placeholder="Username"-->
+  <!--                     id="email"-->
+  <!--                     formControlName="email"-->
+  <!--                     name="email"-->
+  <!--                     >-->
+              </mat-form-field>
+
+              <mat-form-field>
+                <input type="password"  matInput showHideInput formControlName="password" id="password" placeholder="Password">
+                <i matSuffix
+                   class="material-icons"
+                   showHideTrigger="password"
+                   [showHideStatus]="{ materialIcon: true, id: 'password' }"
+                ></i>
+              </mat-form-field>
+              <!--                 [showHideStatus]="{ materialIcon: true, id: 'password' }"-->
+
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="end start" fxLayoutGap="10px" fxLayoutGap.xs="0">
+            <button mat-button class="btn btn-primary" type="button" (click)="onSubmit()" >Login</button>
+          </div>
 
 
-<div fxLayout.xs="column" fxLayout="row" fxFlex="30" fxLayoutAlign="center center" id="login-outer-div">
-
-  <div style="min-height: 65vh">
-    <mat-card fxFlex="95"  class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-    </mat-card-header>
-
-     <mat-card-content>
-        <div id="content">
-
-          <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
-          <form  [formGroup]="loginForm"  *ngIf="!isLoading">
-            <h1>{{loginType}} Login</h1>
-<!--            <mat-error>User ID or Password is wrong</mat-error>-->
-            <mat-form-field>
-              <input type="text" matInput formControlName="email" id="email" placeholder="User ID">
-<!--              <input type="text" matInput placeholder="Username"-->
-<!--                     id="email"-->
-<!--                     formControlName="email"-->
-<!--                     name="email"-->
-<!--                     >-->
-            </mat-form-field>
-
-            <mat-form-field>
-              <input type="password"  matInput showHideInput formControlName="password" id="password" placeholder="Password">
-              <i matSuffix
-                 class="material-icons"
-                 showHideTrigger="password"
-                 [showHideStatus]="{ materialIcon: true, id: 'password' }"
-              ></i>
-            </mat-form-field>
-            <!--                 [showHideStatus]="{ materialIcon: true, id: 'password' }"-->
-
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="end start" fxLayoutGap="10px" fxLayoutGap.xs="0">
-          <button mat-button class="btn btn-primary" type="button" (click)="onSubmit()" >Login</button>
+        </form>
         </div>
+       </mat-card-content>
+      <mat-card-actions>
 
+      </mat-card-actions>
+    </mat-card>
+    </div>
 
-      </form>
-      </div>
-     </mat-card-content>
-    <mat-card-actions>
-
-    </mat-card-actions>
-  </mat-card>
   </div>
+</div>
 
 </div>
+
+
+
+
+
+
