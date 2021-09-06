@@ -51,7 +51,7 @@ export class WatchDrawService {
         }
 
       });
-    }, 10000);
+    }, 1000);
   }
 
 

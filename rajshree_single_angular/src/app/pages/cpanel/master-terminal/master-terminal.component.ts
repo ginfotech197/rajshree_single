@@ -55,7 +55,6 @@ export class MasterTerminalComponent implements OnInit {
     this.stockists = this.masterStockistService.getStockists();
     this.masterStockistService.getStockistListener().subscribe((response: Stockist[]) => {
       this.stockists = response;
-      console.log(this.stockists, 'from terminal');
     });
   }
 

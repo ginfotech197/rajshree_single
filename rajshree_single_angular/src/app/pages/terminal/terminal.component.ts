@@ -107,9 +107,9 @@ export class TerminalComponent implements OnInit {
           this.wheel.reset();
           this.spin(this.todayLastResult.data.single_number).then(r => {});
         }
-        }, 2000);
+        }, 1000);
     });
-
+    // this.spin(5).then(r => {console});
     this.gameTypes = this.gameTypeService.getGameType();
     this.gameTypeService.getGameTypeListener().subscribe((response: GameType[]) => {
       this.gameTypes = response;

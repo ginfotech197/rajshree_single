@@ -29,7 +29,7 @@ export class CpanelComponent implements OnInit {
   constructor(private ngxPrinterService: NgxPrinterService, private authService: AuthService) {
     this.printWindowSubscription = this.ngxPrinterService.$printWindowOpen.subscribe(
       val => {
-        console.log('Print window is open:', val);
+        // console.log('Print window is open:', val);
       }
     );
     this.$printItems = this.ngxPrinterService.$printItems;

@@ -37,7 +37,7 @@ export class AdminReportsComponent implements OnInit {
 
   // picker1: any;
   constructor(private adminReportService: AdminReportService) {
-    console.log(this.thisDay);
+    // console.log(this.thisDay);
   }
 
   ngOnInit(): void {
