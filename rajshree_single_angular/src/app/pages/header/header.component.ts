@@ -123,6 +123,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
    }
   }
 
+  refresh(){
+    location.reload();
+    // console.log();
+  }
+
 
 
 
