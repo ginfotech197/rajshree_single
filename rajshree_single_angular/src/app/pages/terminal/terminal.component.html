@@ -87,7 +87,8 @@
               <div class="d-flex" style="">
                 <div class="col-1"></div>
                 <div class="" style="border: 5px solid white; min-width: 85%;border-style: double; border-radius: 10px;">
-                  <div style="color: white; font-weight: bold; font-size: x-large; background-color: red; border: 1px solid black; border-radius: 5px;">{{remainingTime}}</div>
+                  <div [hidden]="value>100 || value<0" style="color: white; font-weight: bold; font-size: x-large; background-color: red; border: 1px solid black; border-radius: 5px;">{{remainingTime}}</div>
+                  <div [hidden]="!(value>100 || value<0)" style="color: white; font-weight: bold; font-size: x-large; background-color: red; border: 1px solid black; border-radius: 5px;">00:00:00</div>
                   <div [hidden]="value>100 || value<0" style="color: white; font-weight: bold; font-size: x-large; background-color: yellow; border: 1px solid black; border-radius: 5px;"><mat-progress-bar [color]="color" class="green-progress" mode="determinate"  [value]="value"></mat-progress-bar></div>
                   <div [hidden]="!(value>100 || value<0)" style="color: white; font-weight: bold; font-size: x-large; background-color: yellow; border: 1px solid black; border-radius: 5px;"><mat-progress-bar [color]="color" class="green-progress" mode="indeterminate"  [value]="value"></mat-progress-bar></div>
                 </div>
@@ -108,7 +109,7 @@
                 </div>
               </div>
               <div class=" d-flex" style="height: 50px; border-radius: 10px; margin-left: 10%;">
-                <button (click)="saveUserPlayInputDetails()" style="font-size: 100%; width: 100%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double; font-size: 30px;font-weight: bolder;" class="btn btn-warning ml-1 btn-responsive">BUY</button>
+                <button [disabled]="value>100 || value<0" (click)="saveUserPlayInputDetails()" style="font-size: 100%; width: 100%;height: 145%;  border: 8px solid rgb(255, 255, 255); border-style: double; font-size: 30px;font-weight: bolder;" class="btn btn-warning ml-1 btn-responsive">BUY</button>
               </div>
             </div>
 
