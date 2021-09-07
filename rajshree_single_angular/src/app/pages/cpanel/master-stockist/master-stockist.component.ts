@@ -214,6 +214,7 @@ export class MasterStockistComponent implements OnInit {
           rechargeDoneByUid: this.user.userId
         };
         this.masterStockistService.saveStockistBalance(masterData).subscribe(response => {
+          console.log(response);
           if (response.success === 1){
             const responseData = response.data;
             const targetStockistIndex = this.stockists.findIndex(x => x.userId === responseData.userId);
