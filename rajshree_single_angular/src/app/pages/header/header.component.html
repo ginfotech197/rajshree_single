@@ -255,9 +255,11 @@
             [value]="value">
           </mat-progress-spinner> -->
 <!--        </div>-->
+        <a class="mt-3" href="assets/app/RajshreeSingle.apk" style="color: yellow; background-color: transparent"><mat-icon style="font-size: 30px;">android</mat-icon></a>
         <i style="color: white; font-size: 30px; font-weight: bold;" class="bi bi-arrow-clockwise mt-3 mr-3" (click)="refresh()"
         routerLinkActive="MyActiveMenu"
         [routerLinkActiveOptions]="{exact: true}"></i>
+
         <span class="mt-2  mr-2" style="font-size: large;color: white; text-align: center;">Next draw<br>{{activeDrawTime.visibleTime}}</span>
         <div class="clock-container clock2 ml-1 mt-3 pt-1" *ngIf="alwaysTime" style="font-size: large; width: 150px">
           <div class="time">{{alwaysTime}}</div>
