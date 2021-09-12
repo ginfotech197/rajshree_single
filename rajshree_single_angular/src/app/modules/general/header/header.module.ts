@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {FlexModule} from '@angular/flex-layout';
 import {MatProgressBar, MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinner, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {MatProgressSpinner, MatProgressSpinnerModule} from '@angular/material/pr
     FlexModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatIconModule
   ]
 })
 export class HeaderModule { }
