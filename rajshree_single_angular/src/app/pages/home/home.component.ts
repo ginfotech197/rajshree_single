@@ -49,8 +49,8 @@ export class HomeComponent implements OnInit {
 
   public openPDF(): void {
     // const DATA = document.getElementById('table-div');
-    const DATA = document.getElementById('title-4-div');
-    // console.log(DATA);
+    const DATA = document.getElementById('table-div');
+    console.log(DATA);
     html2canvas(DATA).then(canvas => {
 
       const fileWidth = 208;

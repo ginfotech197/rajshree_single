@@ -146,7 +146,8 @@ export class TerminalComponent implements OnInit {
       this.copyNumberMatrix  = JSON.parse(JSON.stringify(this.numberCombinationMatrix));
     });
 
-    this.singleNumbers = this.playGameService.getSingleNumbers();
+    // this.singleNumbers = this.playGameService.getSingleNumbers();
+    this.singleNumbers = this.playGameService.getSingleNumbersFromDatabase();
     this.playGameService.getSingleNumberListener().subscribe((response: SingleNumber[]) => {
       this.singleNumbers = response;
       this.copySingleNumber = JSON.parse(JSON.stringify(this.singleNumbers));
@@ -348,7 +349,7 @@ export class TerminalComponent implements OnInit {
       return;
     }
 
-    if(user.balance < this.totalTicketPurchased){
+    if (user.balance < this.totalTicketPurchased){
       Swal.fire({
         position: 'top-end',
         icon: 'error',
@@ -373,7 +374,7 @@ export class TerminalComponent implements OnInit {
           playMaster: {drawMasterId: this.activeDrawTime.drawId, terminalId: this.user.userId},
           playDetails: this.userGameInput
         };
-        this.playGameService.saveUserPlayInputDetails(masterData).subscribe(response => {
+    this.playGameService.saveUserPlayInputDetails(masterData).subscribe(response => {
           if (response.success === 1){
             this.lastPurchasedTicketDetails = response;
             this.lastPurchasedTicketSingle = this.lastPurchasedTicketDetails.data.game_input.single_game_data;

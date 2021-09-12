@@ -44,7 +44,7 @@ export class PlayGameService {
     // console.log('play game service calling', userData);
     // if (userData !== null){
       // get single numbers
-      this.http.get(this.BASE_API_URL + '/dev/singleNumbers').subscribe((response: ServerResponse) => {
+    this.http.get(this.BASE_API_URL + '/dev/singleNumbers').subscribe((response: ServerResponse) => {
         this.singleNumbers = response.data;
         this.singleNumberSubject.next([...this.singleNumbers]);
       });
@@ -119,5 +119,12 @@ export class PlayGameService {
 
   getTodayLastResultListener(){
     return this.todayLastResultSubject.asObservable();
+  }
+
+  getSingleNumbersFromDatabase(){
+    this.http.get(this.BASE_API_URL + '/dev/singleNumbers').subscribe((response: ServerResponse) => {
+      this.singleNumbers = response.data;
+    });
+    return this.singleNumbers;
   }
 }
