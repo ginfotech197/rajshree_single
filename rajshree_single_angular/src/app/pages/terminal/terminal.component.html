@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td><div class="td-style" style="background-color: red;border: 6px solid white; border-radius: 10px; color: white; font-weight:bold ; border-style:  double;width: 100%;"><a style="background-color: transparent" (click)="setGameInputSet(singleNumbers[8],1,1)">{{singleNumbers[8].singleNumber}}</a><br><input #single8 type="text" (blur)="setValue(single8.value,singleNumbers[8])" [value]="singleNumbers[8].quantity || ''" style="width: 90%; border-radius:5px; height: 39px;"></div></td>
+                  <td><div class="td-style" style="background-color: red;border: 6px solid white; border-radius: 10px; color: white; font-weight:bold ; border-style:  double;width: 100%;"><a style="background-color: transparent" (click)="setGameInputSet(singleNumbers[8],1,1)">{{singleNumbers[8].singleNumber}}</a><br><input #single8 type="number" (blur)="setValue(single8.value,singleNumbers[8])" [value]="singleNumbers[8].quantity || ''" style="width: 90%; border-radius:5px; height: 39px;"></div></td>
                   <td></td>
                 </tr>
               </tbody>
