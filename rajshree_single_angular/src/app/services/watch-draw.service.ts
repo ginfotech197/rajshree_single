@@ -47,6 +47,7 @@ export class WatchDrawService {
             this.playGameService.getTodayLastResult();
             this.playGameService.getTodayResult();
             this.commonService.getActiveServerDrawTime();
+            this.commonService.updateTerminalCancellation();
           }
         }
 
