@@ -105,28 +105,28 @@ export class TerminalReportComponent implements OnInit {
           }
         });
         this.terminalReportService.cancelTicket(masterId).subscribe((response) => {
-          // if(response.success == 1){
-          if(response.data){
+          if(response.success === 1){
+          // if(response.data){
             Swal.hideLoading();
             Swal.fire({
               icon: 'success',
               title: 'Cancelled',
               showConfirmButton: false,
               timer: 1500
-            })
+            });
           }else{
             Swal.fire({
               icon: 'error',
-              title: 'Some error occurred',
+              title: 'You cannot cancel this ticket',
               showConfirmButton: false,
               timer: 2000
-            })
+            });
           }
         });
       } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
+        Swal.fire('Changes are not saved', '', 'info');
       }
-    })
+    });
   }
 
   getTerminalBarcodeReport(){
