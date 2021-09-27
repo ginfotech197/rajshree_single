@@ -68,7 +68,10 @@ export class TerminalComponent implements OnInit {
   columnNumber3 = 1;
 
   public activeTripleContainerValue = 0;
-  public selectedChip = 10;
+  public selectedChip = 0;
+  public previousChip = 0;
+  public selectedChipValue = 0;
+  public counter = 0;
   copyNumberMatrix: SingleNumber[];
   copySingleNumber: SingleNumber[];
   isProduction = environment.production;
@@ -195,6 +198,20 @@ export class TerminalComponent implements OnInit {
 
   }// end of ngOnIInit
 
+  initializeValue(value){
+    if (this.selectedChip === 0 ){
+      return;
+    }
+    if(this.selectedChipValue === 0){
+      return;
+    }
+    value.quantity = (this.selectedChipValue / this.gameTypes[0].mrp);
+    this.selectedChip = 0;
+    this.selectedChipValue = 0;
+    this.counter = 0;
+    this.previousChip = 0;
+  }
+
 
   reset() {
     this.wheel.reset();
@@ -319,6 +336,29 @@ export class TerminalComponent implements OnInit {
 
   changeChip(value){
     this.selectedChip = value;
+    if (this.previousChip === 0){
+      this.previousChip = value;
+    }
+    if (this.previousChip !== this.selectedChip){
+      this.counter = 0;
+    }
+    if (this.selectedChip === 10 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+    if (this.selectedChip === 20 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+    if (this.selectedChip === 50 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+    if (this.selectedChip === 100 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+    // console.log(this.counter + ' ' + this.selectedChipValue);
   }
 
   resetMatrixValue(){
