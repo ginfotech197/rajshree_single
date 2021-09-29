@@ -71,7 +71,7 @@ export class TerminalComponent implements OnInit {
   public selectedChip = 10;
   public previousChip = 10;
   public selectedChipValue = 10;
-  public counter = 1;
+  public counter = 0;
   copyNumberMatrix: SingleNumber[];
   copySingleNumber: SingleNumber[];
   isProduction = environment.production;
@@ -211,7 +211,39 @@ export class TerminalComponent implements OnInit {
     // this.counter = 0;
     // this.previousChip = 0;
 
-    value.quantity = (this.selectedChipValue / this.gameTypes[0].mrp);
+
+
+    if (this.previousChip === 0){
+      this.previousChip = value;
+    }
+    if (this.previousChip !== this.selectedChip){
+      this.counter = 0;
+    }
+    if (this.selectedChip === 10 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+    if (this.selectedChip === 20 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+    if (this.selectedChip === 50 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+    if (this.selectedChip === 100 ){
+      this.counter  = this.counter + 1;
+      this.selectedChipValue = this.selectedChip * this.counter;
+    }
+
+    console.log(value.quantity);
+    if (value.quantity){
+      value.quantity = value.quantity + (this.selectedChip / this.gameTypes[0].mrp);
+    }else{
+      value.quantity = (this.selectedChip / this.gameTypes[0].mrp);
+    }
+
+
 
     this.setValue(value.quantity, value );
 
@@ -345,28 +377,28 @@ export class TerminalComponent implements OnInit {
 
   changeChip(value){
     this.selectedChip = value;
-    if (this.previousChip === 0){
-      this.previousChip = value;
-    }
-    if (this.previousChip !== this.selectedChip){
-      this.counter = 0;
-    }
-    if (this.selectedChip === 10 ){
-      this.counter  = this.counter + 1;
-      this.selectedChipValue = this.selectedChip * this.counter;
-    }
-    if (this.selectedChip === 20 ){
-      this.counter  = this.counter + 1;
-      this.selectedChipValue = this.selectedChip * this.counter;
-    }
-    if (this.selectedChip === 50 ){
-      this.counter  = this.counter + 1;
-      this.selectedChipValue = this.selectedChip * this.counter;
-    }
-    if (this.selectedChip === 100 ){
-      this.counter  = this.counter + 1;
-      this.selectedChipValue = this.selectedChip * this.counter;
-    }
+    // if (this.previousChip === 0){
+    //   this.previousChip = value;
+    // }
+    // if (this.previousChip !== this.selectedChip){
+    //   this.counter = 0;
+    // }
+    // if (this.selectedChip === 10 ){
+    //   this.counter  = this.counter + 1;
+    //   this.selectedChipValue = this.selectedChip * this.counter;
+    // }
+    // if (this.selectedChip === 20 ){
+    //   this.counter  = this.counter + 1;
+    //   this.selectedChipValue = this.selectedChip * this.counter;
+    // }
+    // if (this.selectedChip === 50 ){
+    //   this.counter  = this.counter + 1;
+    //   this.selectedChipValue = this.selectedChip * this.counter;
+    // }
+    // if (this.selectedChip === 100 ){
+    //   this.counter  = this.counter + 1;
+    //   this.selectedChipValue = this.selectedChip * this.counter;
+    // }
     // console.log(this.counter + ' ' + this.selectedChipValue);
   }
 
