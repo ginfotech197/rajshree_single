@@ -68,10 +68,10 @@ export class TerminalComponent implements OnInit {
   columnNumber3 = 1;
 
   public activeTripleContainerValue = 0;
-  public selectedChip = 0;
-  public previousChip = 0;
-  public selectedChipValue = 0;
-  public counter = 0;
+  public selectedChip = 10;
+  public previousChip = 10;
+  public selectedChipValue = 10;
+  public counter = 1;
   copyNumberMatrix: SingleNumber[];
   copySingleNumber: SingleNumber[];
   isProduction = environment.production;
@@ -199,17 +199,26 @@ export class TerminalComponent implements OnInit {
   }// end of ngOnIInit
 
   initializeValue(value){
-    if (this.selectedChip === 0 ){
-      return;
-    }
-    if(this.selectedChipValue === 0){
-      return;
-    }
+    // if (this.selectedChip === 0 ){
+    //   return;
+    // }
+    // if (this.selectedChipValue === 0){
+    //   return;
+    // }
+    // value.quantity = (this.selectedChipValue / this.gameTypes[0].mrp);
+    // this.selectedChip = 0;
+    // this.selectedChipValue = 0;
+    // this.counter = 0;
+    // this.previousChip = 0;
+
     value.quantity = (this.selectedChipValue / this.gameTypes[0].mrp);
-    this.selectedChip = 0;
-    this.selectedChipValue = 0;
-    this.counter = 0;
-    this.previousChip = 0;
+
+    this.setValue(value.quantity, value );
+
+  }
+
+  test1(value){
+
   }
 
 
@@ -282,7 +291,7 @@ export class TerminalComponent implements OnInit {
 
     let x = 0;
     this.userGameInput.forEach(function(value) {
-      let tempQuantity = (value.quantity)?(value.quantity):0;
+      const tempQuantity = (value.quantity) ? (value.quantity) : 0;
       x = x + tempQuantity;
     });
     this.totalTicketPurchased = x;
@@ -410,7 +419,7 @@ export class TerminalComponent implements OnInit {
     //   confirmButtonText: 'Yes, save It!'
     // }).then((result) => {
     //   if (result.isConfirmed){
-        const masterData = {
+    const masterData = {
           playMaster: {drawMasterId: this.activeDrawTime.drawId, terminalId: this.user.userId},
           playDetails: this.userGameInput
         };
