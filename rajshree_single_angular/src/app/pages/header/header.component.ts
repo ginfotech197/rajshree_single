@@ -40,6 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   faUserAlt = faUserAlt;
   isProduction = environment.production;
   public user: User;
+  // user: User;
   activeDrawTime: DrawTime;
 
   constructor(private authService: AuthService,  private commonService: CommonService) { }

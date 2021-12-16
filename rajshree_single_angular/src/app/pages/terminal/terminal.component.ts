@@ -471,6 +471,7 @@ export class TerminalComponent implements OnInit {
             });
             // updating terminal balance from here
             this.authService.setUserBalanceBy(responseData.play_master.terminal.balance);
+            // console.log(responseData.play_master.terminal.balance);
             this.resetMatrixValue();
 
             // setTimeout(function() {
