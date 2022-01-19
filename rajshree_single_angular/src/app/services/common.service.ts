@@ -131,7 +131,7 @@ export class CommonService {
 
       // console.log('rm_mn: '+ remainingMin , 'rem_sec' + remainingSec);
 
-      if (remainingMin <= 1){
+      if (remainingMin <= 1 && remainingSec > 30){
         this.updateTerminalCancellation();
       }
 
