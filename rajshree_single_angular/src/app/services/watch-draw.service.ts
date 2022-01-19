@@ -45,9 +45,7 @@ export class WatchDrawService {
           const x = this.activeDrawTime.endTime.split(':');
           // tslint:disable-next-line:radix
           this.activeTimeMillisecond = (((parseInt(String(x[0])) * 3600)  + (parseInt(String(x[1])) * 60) + parseInt(String(x[2]))) * 1000) + 500;
-          console.log(this.activeDrawTime, ' ' , this.activeTimeMillisecond);
           this.differenceTime = this.activeTimeMillisecond - this.serverTimeMillisecond ;
-          console.log(this.differenceTime);
 
 
           setTimeout(() => {
@@ -173,12 +171,20 @@ export class WatchDrawService {
 
 
   getNewActiveDraw(){
-    this.http.get(this.BASE_API_URL + '/dev/drawTimes/active').subscribe((response: ServerResponse) => {
-      this.activeDrawTime = response.data;
-      const x = this.activeDrawTime.endTime.split(':');
-      // tslint:disable-next-line:radix
-      this.activeTimeMillisecond = (parseInt(String(x[2])) * 3600  + parseInt(String(x[1])) * 60 + parseInt(String(x[0]))) * 1000;
-    });
+    this.http.get(this.BASE_API_URL + '/serverTime')
+      .subscribe((response: {hour: number, minute: number, second: number, 'meridiem': string}) => {
+        this.serverTime = response;
+        this.serverTimeMillisecond = ((this.serverTime.hour * 3600) + (this.serverTime.minute * 60) + this.serverTime.second) * 1000;
+
+        this.http.get(this.BASE_API_URL + '/dev/drawTimes/active').subscribe((response: ServerResponse) => {
+          this.activeDrawTime = response.data;
+          const x = this.activeDrawTime.endTime.split(':');
+          // tslint:disable-next-line:radix
+          this.activeTimeMillisecond = (((parseInt(String(x[0])) * 3600)  + (parseInt(String(x[1])) * 60) + parseInt(String(x[2]))) * 1000) + 500;
+          this.differenceTime = this.activeTimeMillisecond - this.serverTimeMillisecond ;
+        });
+
+      });
   }
 
 
