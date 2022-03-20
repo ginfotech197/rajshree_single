@@ -22,7 +22,7 @@ export class ResultService {
   currentDateResultSubject = new Subject<CurrentGameResult>();
 
   constructor(private http: HttpClient, private errorService: ErrorService, private authService: AuthService) {
-    this.http.get(this.BASE_API_URL + '/results/currentDate').subscribe((response: ServerResponse) => {
+    this.http.get(this.BASE_API_URL + '/dev/results/currentDate').subscribe((response: ServerResponse) => {
         this.currentDateResult = response.data;
         this.currentDateResultSubject.next({...this.currentDateResult});
       });

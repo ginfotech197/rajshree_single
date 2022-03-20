@@ -5,7 +5,7 @@ import {ResultComponent} from '../../../../pages/cpanel/result/result.component'
 
 const routes: Routes = [
   { path: '',
-    canActivate : [AuthGuardAdminServiceService],
+    // canActivate : [AuthGuardAdminServiceService],
     component: ResultComponent,
     data: {
       title: 'About',

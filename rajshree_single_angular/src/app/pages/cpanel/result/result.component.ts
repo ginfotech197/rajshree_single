@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentGameResult } from 'src/app/models/CurrentGameResult.model';
 import { ResultService } from 'src/app/services/result.service';
+import {AuthService} from '../../../services/auth.service';
+import {User} from '../../../models/user.model';
 
 
 @Component({
@@ -17,9 +19,17 @@ export class ResultComponent implements OnInit {
   columnNumber2 = 7;
   columnNumber3 = 1;
   public activeTripleContainerValue = 0;
+  isAuthenticated = true;
+  user: User;
 
-  constructor(private resultService: ResultService) {
-
+  constructor(private resultService: ResultService, private authService: AuthService) {
+      this.authService.userBehaviorSubject.asObservable().subscribe((response) => {
+        this.user = response;
+        if (this.user === null){
+          this.isAuthenticated = false;
+        }
+        console.log(this.user);
+      });
    }
 
   ngOnInit(): void {
