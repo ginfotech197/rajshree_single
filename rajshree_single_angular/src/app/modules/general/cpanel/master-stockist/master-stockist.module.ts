@@ -12,6 +12,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSortModule} from '@angular/material/sort';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
+import {NgSelectModule} from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatSlideToggleModule,
     MatSortModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    NgSelectModule
   ],
   exports: [
     MasterStockistComponent

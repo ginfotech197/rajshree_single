@@ -25,6 +25,8 @@ export class MasterStockistComponent implements OnInit {
   sortedStockistList: Stockist[] = [];
   selectedStockist: Stockist = null;
   public highLightedRowIndex = -1;
+  selectedPersonId = '5a15b13c36e7a7f00cf0d7cb';
+  
   constructor(private masterStockistService: MasterStockistService, private authService: AuthService) {
     this.stockistMasterForm = new FormGroup({
       id: new FormControl(null),
